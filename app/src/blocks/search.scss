@@ -1,0 +1,57 @@
+.search {
+
+    &__inp {
+        height: 40px;
+        width: 100%;
+        margin-bottom: 25px;
+        font-size: 16px;
+        padding-left: 15px;
+    }
+
+    &__text {
+        font-family: 'Roboto Regular',sans-serif;
+        font-size: 16px;
+        color: #1266a6;
+        margin-bottom: 20px;
+    }
+
+    &__title {
+        font-family: 'Roboto Bold',sans-serif;
+        font-size: 16px;
+        color: #1266a6;
+        margin-bottom: 15px;
+        display: block;
+    }
+
+    &__content {
+        font-family: 'Roboto Regular',sans-serif;
+        font-size: 14px;
+        color: #454545;
+    }
+
+    &__result {
+        font-size: 18px;
+        color: #939598;
+        font-family: 'Roboto Light',sans-serif;
+    }
+
+    &__sort {
+        display: inline-block;
+        font-size: 16px;
+        color: #1266a6;
+
+        &--active {
+            font-weight: bold;
+        }
+    }
+
+    &__wrapper-input {
+        position: relative;
+    }
+
+    &__icon {
+        position: absolute;
+        right: 10px;
+        top: 13px;
+    }
+}

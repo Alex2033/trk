@@ -1,0 +1,13 @@
+.about {
+
+    &__img {
+        margin-bottom: 30px;
+    }
+
+    &__detailed {
+
+        @media (max-width: 767px) {
+            margin-bottom: 50px;
+        }
+    }
+}

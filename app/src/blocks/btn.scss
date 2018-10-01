@@ -1,0 +1,15 @@
+.btn {
+    border: 0;
+    outline: 0;
+    font-size: 14px;
+    transition: background-color .2s ease;
+    background-color: lighten($accent-color, 60%);
+    width: 194px;
+    height: 40px;
+    border-radius: 20px;
+    line-height: 35px;
+
+    &:hover {
+        background-color: lighten($accent-color, 50%);
+    }
+}

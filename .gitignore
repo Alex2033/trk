@@ -1,0 +1,8 @@
+node_modules/
+.idea/
+npm-debug.log
+/app/layout/
+!/app/layout/.gitkeep
+/app/img/backup/
+/dist/
+maket/

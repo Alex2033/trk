@@ -1,0 +1,140 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 6px;
+
+	@include screen-sm() {
+		font-size: 7px;
+	}
+
+	@include screen-md() {
+		font-size: 8px;
+	}
+
+	@include screen-lg() {
+		font-size: 9px;
+	}
+
+	@include screen-xl() {
+		font-size: 10px;
+	}
+}
+
+body {
+	font-size: 2.4rem;
+	font-family: $font-main;
+	color: $color-text;
+	font-weight: 300;
+	background: url(../img/trk-main-bg.png) no-repeat;
+	background-position: 50% 50%;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+input,
+textarea {
+	//-webkit-appearance: none;
+	//border-radius: 0;
+
+	&:hover,
+	&:focus,
+	&:active {
+		outline: none;
+	}
+}
+
+textarea {
+	resize: none;
+}
+
+hr {
+	margin: 0;
+}
+
+::selection {
+
+}
+
+img {
+	max-width: 100%;
+}
+
+p {
+	line-height: 1.5;
+	margin: 0 0 1em;
+
+	b {
+		font-weight: 500;
+	}
+}
+
+a {
+
+	&:hover {
+		text-decoration: none;
+	}
+
+	&:focus {
+		text-decoration: none;
+	}
+}
+
+h1 {
+	font-family: 'Open Sans Light';
+	font-size: 40px;
+	color: #3c3c3b;
+	text-transform: uppercase;
+    font-weight: 300;
+}
+
+h2 {
+	font-family: 'Open Sans Regular',sans-serif;
+	font-size: 21px;
+	color: #2f3d4f;
+	text-transform: uppercase;
+    font-weight: 400;
+}
+
+h3 {
+	font-family: 'Open Sans Regular',sans-serif;
+	font-size: 18px;
+	color: #2f3d4f;
+	text-transform: uppercase;
+	font-weight: 400;
+}
+
+h4 {
+	font-family: 'Open Sans SemiBold',sans-serif;
+	font-size: 18px;
+	color: #2f3d4f;
+}
+
+ol {
+
+	li {
+		font-family: 'Open Sans Regular',sans-serif;
+		font-size: 16px;
+		color: #2f3d4f;
+	}
+}
+
+.inner-h2 {
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 1.25;
+	text-transform: none;
+	margin: 0 0 10px;
+}
+
+.order-2 {
+	order: 2;
+}
+
+.slick-arrow {
+	width: 55px;
+	height: 55px;
+}

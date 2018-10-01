@@ -1,0 +1,21 @@
+.trade {
+    transform: rotate(360deg);
+
+    &__angle-down {
+        transition: 0.5s;
+    }
+
+    &__list {
+        padding-left: 0;
+        display: none;
+    }
+
+    &__item {
+        list-style: none;
+    }
+
+    &__rotate {
+        transform: rotate(180deg);
+        transition: 0.5s;
+    }
+}

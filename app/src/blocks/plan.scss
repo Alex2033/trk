@@ -1,0 +1,438 @@
+.plan__container {
+    padding-top: 35px;
+    background-color: $color-main-light;
+}
+
+.plan__header {
+    text-align: center;
+}
+
+.plan__title {
+    margin: 0;
+
+    @media (max-width: $point-sm) {
+        font-size: 32px;
+    }
+}
+
+.plan__bread {
+    padding: 0;
+    margin-bottom: 15px;
+}
+
+.plan-h2 {
+    color: $accent-color;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.3333333;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.plan-h2--uppercase {
+    text-transform: uppercase;
+}
+
+.plan__img {
+    margin-bottom: 20px;
+}
+
+.tabs {
+    @include flex(fles-start)
+    margin-bottom: 30px;
+
+    @media (max-width: $point-lg) {
+        justify-content: center;
+    }
+}
+
+.tabs__item {
+    padding: 18px 0;
+    min-width: 182px;
+    cursor: pointer;
+    background-color: lighten($accent-color, 58%);
+    text-align: center;
+    color: $accent-color;
+    font-size: 18px;
+    position: relative;
+    font-weight: 700;
+    transition: color .2s ease, background-color .2s ease;
+
+    &:not(:last-child) {
+        margin-right: 30px;
+    }
+
+    &.active {
+        background-color: $accent-color;
+        color: #fff;
+
+        &::before {
+            display: block;
+        }
+    }
+
+    &:hover {
+        color: #fff;
+        background-color: $accent-color;
+    }
+
+    &::before {
+        content: '';
+        display: none;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: -19px;
+        border: 10px solid transparent;
+        border-bottom: 10px solid $accent-color;
+    }
+
+    @media (max-width: $point-md) {
+        min-width: 135px;
+    }
+
+    @media (max-width: $point-sm) {
+        min-width: 93px;
+        padding: 15px 0;
+        font-size: 16px;
+
+        &:not(:last-child) {
+            margin-right: 5px;
+        }
+
+        &::before {
+            top: -19px;
+        }
+    }
+}
+
+.conventions__list {
+    list-style-type: none;
+    @include flex()
+    margin: 0 -15px 25px;
+    padding: 0 15px;
+    border-bottom: 1px solid #E6E6EE;
+
+    @media (max-width: $point-xl) {
+        justify-content: flex-start;
+    }
+}
+
+.conventions__item {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+
+    @media (max-width: $point-xl) {
+        width: 25%;
+    }
+
+    @media (max-width: $point-lg) {
+        width: 33.3333%;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    @media (max-width: $point-md) {
+        width: 33.3333%;
+        justify-content: center;
+    }
+
+    @media (max-width: $point-sm) {
+        width: 50%;
+    }
+}
+
+.conventions__icon {
+    margin-right: 12px;
+    flex-shrink: 0;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+
+    @media (max-width: $point-lg) {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+.alt-tab-content__title {
+    text-align: left;
+    margin-bottom: 30px;
+    margin-top: 0;
+    text-transform: none;
+
+    @media (max-width: $point-lg) {
+        text-align: center;
+    }
+}
+
+.conventions__text {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.services {
+    @include flex(flex-start, nowrap)
+
+    @media (max-width: $point-xl) {
+        flex-direction: column;
+    }
+}
+
+.services-menu {
+    margin-left: -15px;
+    flex-shrink: 0;
+
+    .lease__link {
+        color: $color-text;
+    }
+
+    .services-menu__item, .lease__left-item, {
+        cursor: pointer;
+        &.active {
+            background-color: #e6f4ff;
+
+            .lease__link {
+                color: $accent-color;
+            }
+        }         
+    }
+}
+
+.services-menu__item {
+    list-style: none;
+    padding-left: 30px;
+    min-height: 40px;
+
+    &:hover {
+        background: #e6f4ff;
+        width: 100%;
+        min-height: 40px;
+    }
+}
+
+.services-content, .alt-services-content {
+    padding-left: 60px;
+    padding-bottom: 350px;
+    width: 100%;
+
+    @media (max-width: $point-xl) {
+        padding-bottom: 150px;
+        padding: 0 15px 150px;
+    }
+
+    @media (max-width: $point-md) {
+        padding-bottom: 50px;
+    }
+}
+
+.services-content__levels {
+    @include flex(flex-start);
+
+    @media (max-width: $point-xl) {
+        justify-content: center;
+    }
+}
+
+.services-content__level {
+    font-size: 16px;
+    font-family: 'Open Sans Bold',sans-serif;
+    color: #0066b3;
+    text-decoration: underline;
+    text-transform: uppercase;
+    display: block;
+    margin-right: 55px;
+
+    @media (max-width: $point-xs) {
+        margin-right: 25px;
+    }
+}
+
+.services-content__body {
+    @include flex();
+    max-width: 100%;
+}
+
+.services-content__col {
+    width: calc(33.3333% - 40px);
+
+    @media (max-width: $point-sm) {
+        width: calc(50% - 10px);
+    }
+
+    @media (max-width: $point-xs) {
+        width: initial;
+    }
+}
+
+.services-content__list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.services-content__title {
+    font-size: 13px;
+    line-height: 1.2;
+    font-weight: 700;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.services-content__item {
+    line-height: 1.2;
+}
+
+.services-content__link {
+    font-size: 16px;
+    line-height: 1.2;
+    color: $color-text;
+    text-decoration: underline;
+    font-weight: 400;
+    display: inline-block;
+
+    &:hover {
+        text-decoration: none;
+        color: $color-text;
+    }
+}
+
+.services-content__link--red {
+    color: #9e0b0f;
+
+    &:hover {
+        color: #9e0b0f;
+    }
+}
+
+.parking__wrapper {
+    margin-bottom: 35px;
+}
+
+.parking__title {
+    margin-bottom: 0;
+}
+
+.parking__list {
+    padding: 0;
+    list-style-type: none;
+    margin: 0;
+}
+
+.parking__item {
+    font-size: 16px;
+    line-height: 2;
+    @include flex(space-between, nowrap);
+    border-bottom: 1px solid #E6E6EE;
+    padding: 17px 0;
+
+    @media (max-width: $point-lg) {
+        line-height: 1.2;
+    }
+
+    @media (max-width: $point-md) {
+        flex-wrap: wrap;
+        align-items: flex-end;
+    }
+
+    @media (max-width: $point-sm) {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.parking__item-left {
+    min-width: 110px;
+
+    @media (max-width: $point-xl) {
+        min-width: 75px;
+    }
+
+    @media (max-width: $point-md) {
+        min-width: initial;
+        margin: 0 auto 15px;
+    }
+}
+
+.parking__content {
+    @include flex(flex-start, nowrap);
+    flex-grow: 1;
+    align-items: flex-end;
+
+    @media (max-width: $point-lg) {
+        align-items: flex-start;
+    }
+
+    @media (max-width: $point-md) {
+        align-items: center;
+    }
+
+    @media (max-width: $point-sm) {
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.parking__content-left,
+.parking__content-right {
+    width: 50%;
+
+    @media (max-width: $point-sm) {
+        width: 100%;
+    }
+}
+
+.parking__content-left {
+    flex-shrink: 0;
+
+    @media (max-width: $point-sm) {
+        margin-bottom: 10px;
+    }
+}
+
+.parking__term, .parking__price,
+.parking__payment-method {
+    width: 100%;
+}
+
+.parking__term {
+    max-width: 480px;
+    line-height: 1.2;
+
+    @media (max-width: $point-md) {
+        max-width: 320px;
+    }
+
+    @media (max-width: $point-sm) {
+        max-width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+.parking__price {
+    max-width: 210px;
+
+    @media (max-width: $point-sm) {
+        max-width: 100%;
+    }
+}
+
+.parking__payment-method {
+    max-width: 360px;
+
+    @media (max-width: $point-md) {
+        max-width: 50%;
+
+        @media (max-width: $point-sm) {
+        max-width: 100%;
+    }
+    }
+}
+
+.services__mobile {
+    padding-top: 0;
+    margin-bottom: 15px;
+}

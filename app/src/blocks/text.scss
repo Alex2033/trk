@@ -1,0 +1,25 @@
+.text {
+    font-family: 'Open Sans Regular',sans-serif;
+    font-size: 14px;
+    color: $color-text;
+
+    @media (max-width: 350px) {
+        font-size: 12px;
+    }
+
+    &--middle {
+        font-size: 16px;
+    }
+
+    &--big {
+        font-size: 18px;
+    }
+
+    &--blue {
+        color: #0066b3;
+    }
+
+    &--underline {
+        text-decoration: underline;
+    }
+}

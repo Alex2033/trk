@@ -1,0 +1,33 @@
+.censors {
+    margin-bottom: 110px;
+
+    @media (max-width: 767px) {
+        margin-bottom: 0;
+    }
+
+    &__slider {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    &__item {
+
+        &:focus {
+            outline: none;
+        }
+
+        img {
+            margin: auto;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        a {
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+}

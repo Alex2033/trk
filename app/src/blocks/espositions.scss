@@ -1,0 +1,119 @@
+.espositions {
+    position: relative;
+    padding-bottom: 4em;
+    
+    &--margin {
+        margin-top: 30px;
+    }
+
+    &__link {
+        position: relative;
+        display: block;
+        width: 100%;
+        // max-width: 360px;
+        height: 100%;
+    }
+
+    &__name {
+        position: absolute;
+        bottom: 15px;
+        left: 20px;
+        font-family: 'Open Sans Bold',sans-serif;
+        font-size: 16px;
+        color: $color-main-light;
+    }
+
+    &__wave {
+        background: url('../img/wave-2.png');
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-size: cover;
+        width: 100%;
+        height: 42px;
+    }
+
+    &__banner {
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    &__app-img {
+
+        @media (max-width: 1199px) {
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: 1199px) {
+            margin-bottom: 24px;
+        }
+    }
+
+    &__img {
+        width: 100%;
+
+        &--nobottom {
+
+            @media (max-width: 992px) {
+                margin-bottom: 0 !important;
+            }
+        }
+
+        @media (max-width: 992px) {
+            display: block;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        @media (max-width: 480px) {
+            width: 100%;
+        }
+    }
+
+    &__margin {
+
+        @media (max-width: 767px) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__first-img {
+
+        @media (max-width: 1199px) {
+            width: 48.4%;
+            display: inline-block;
+            max-height: 206.7px;
+            overflow: hidden;
+            float: left;
+            margin-right: 15px;
+            height: auto;
+        }
+
+        @media (max-width: 991px) {
+            width: 47.4%;
+        }
+
+        @media (max-width: 767px) {
+            width: 100%;
+            max-height: initial;
+            overflow: initial;
+            margin-right: initial;
+        }
+    }
+
+    &__second-img {
+
+        @media (max-width: 1199px) {
+            width: 48.4%;
+            margin-left: 15px;
+            display: inline-block;
+            height: auto;
+        }
+
+        @media (max-width: 767px) {
+            width: 100%;
+            margin-left: initial;
+        }
+    }
+}

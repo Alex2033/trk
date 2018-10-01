@@ -1,0 +1,58 @@
+.shop {
+    position: relative;
+    background: #efefef;
+    
+    &__title {
+        font-size: 30px;
+        font-family: 'Open Sans Light',sans-serif;
+        color: $color-main;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 40px;
+        margin-top: 65px;
+    }
+
+    &__news-title {
+        color: #0898ec;
+        font-family: 'Open Sans Bold',sans-serif;
+        font-size: 18px;
+        padding-top: 20px;
+    }
+    
+    &__text {
+        font-size: 14px;
+        color: $color-main;
+        font-family: 'Open Sans Regular',sans-serif;
+    }
+
+    &__date {
+        font-size: 12px;
+        color: $color-main;
+        font-family: 'Open Sans Regular',sans-serif;
+    }
+
+    &__main {
+        padding-bottom: 70px;
+    }
+
+    &__wave {
+        background: url(../img/wave-4.png) no-repeat;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-size: 100%;
+        width: 100%;
+        height: 21px;
+
+        @media (max-width: 992px) {
+            background-size: cover;
+        }
+    }
+
+    &__img {
+
+        @media (max-width: 1199px) {
+            width: 100%;
+        }
+    }
+}

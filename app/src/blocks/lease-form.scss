@@ -1,0 +1,130 @@
+.lease-form__title {
+    margin-bottom: 15px;
+
+    @media (max-width: $point-md) {
+        font-size: 20px;
+    }
+}
+
+.lease-form__wrapper {
+    @include flex();
+    margin-bottom: 30px;
+
+    @media (max-width: $point-md) {
+        margin-bottom: 0;
+    }
+}
+
+.lease-form__label {
+    display: block;
+    width: calc(50% - 25px);
+    margin-bottom: 15px;
+    font-size: 16px;
+
+    @media (max-width: $point-md) {
+        width: 100%;
+    }
+}
+
+.lease-form__label-text {
+    font-size: 14px;
+    font-weight: 700;
+    color: $color-main;
+    display: block;
+    opacity: .6;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.lease-form__item {
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 3px;
+    border: 1px solid #EBEBEB;
+    color: $color-text;
+    padding: 8px 10px;
+}
+
+.lease-form__input {
+    display: block;
+    width: 100%;
+
+    &:focus {
+        box-shadow: 0 0 0 1px $accent-color;
+    }
+}
+
+.lease-form__checkboxes {
+    width: calc(50% - 25px);
+    flex-direction: column;
+    margin-bottom: 20px;
+
+    .lease-form__label {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    @media (max-width: $point-md) {
+        width: 100%;
+    }
+}
+
+.lease-form__checkboxes-label {
+    @include flex();
+    align-items: center;
+
+    .lease-form__label-text {
+        margin-bottom: 15px;
+    }
+
+}
+
+.interval-input {
+    max-width: 150px;
+
+    @media (max-width: $point-md) {
+        max-width: 105px;
+    }
+}
+
+.amount-watts {
+    @media (max-width: $point-md) {
+        order: 1;
+    }
+}
+
+.amount-watts__item {
+    width: 90%;
+    display: inline-block;
+    order: 1;
+}
+
+.lease-form__btn {
+    margin-bottom: 55px;
+
+    @media (max-width: $point-md) {
+        text-align: center;   
+    }
+     
+}
+
+.lease-form__checkbox-text {
+    display: block;
+    &:not(:last-child) {
+        margin-right: 40px;
+    }
+
+    @media (max-width: $point-md) {
+        &:not(:last-child) {
+            margin-right: 10px;
+        }
+    }
+}
+
+.lease__right-side .lease-inner__title {
+    justify-content: flex-start;
+
+    @media (max-width: $point-md) {
+        justify-content: flex-start;
+    }
+}

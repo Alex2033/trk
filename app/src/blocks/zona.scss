@@ -1,0 +1,56 @@
+.zona {
+
+    &__side {
+        display: flex;
+        justify-content: space-between;
+
+        @media (max-width: 767px) {
+            flex-wrap: wrap;
+        }
+    }
+
+    &__img {
+        max-width: initial;
+        margin-right: 20px;
+        margin-bottom: 20px;
+
+        &--last {
+            margin-right: 0;
+        }
+    }
+
+    &__wrap-img {
+        position: relative;
+
+        @media (max-width: 767px) {
+            text-align: center;
+        }
+    }
+
+    &__link {
+
+        @media (max-width: 992px) {
+            width: 49%;
+            overflow: hidden;
+        }
+
+        @media (max-width: 767px) {
+            width: 100%;
+        }
+    }
+
+    &__under-img {
+        background-color: rgba(255,255,255,.9);
+        min-height: 40px;
+        width: 100%;
+        line-height: 40px;
+        font-size: 16px;
+        font-family: 'Open Sans Bold',sans-serif;
+        color: #0066b3;
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+        padding-left: 15px;
+        text-transform: uppercase;
+    }
+}

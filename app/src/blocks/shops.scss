@@ -1,0 +1,135 @@
+.shops {
+
+    &__level {
+        font-size: 16px;
+        font-family: 'Open Sans Bold',sans-serif;
+        color: #0066b3;
+        text-decoration: underline;
+        text-transform: uppercase;
+        display: inline-block;
+        margin-right: 55px;
+    }
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 50px;
+        position: relative;
+
+        @media (max-width: 992px) {
+            flex-wrap: wrap;
+            margin-bottom: 80px;
+        }
+    }
+
+    &__levels {
+        margin-top: 80px;
+    }
+
+    &__text {
+        @media (max-width: 664px) {
+            margin-top: 30px;
+        }
+    }
+
+    &__up {
+
+        @media (max-width: 664px) {
+            display: none;
+        }
+
+        &--block {
+            display:none;
+
+            @media (max-width: 664px) {
+                display: inline-block;
+                margin-left: 15px;
+                vertical-align: middle;
+            }
+
+            @media (max-width: 398px) {
+                margin-left: 0;
+                margin-top: 15px;
+            }
+        }
+    }
+
+    &__side {
+
+        &--first {
+            @media (max-width: 992px) {
+                margin-right: 10px;
+            }
+
+            @media (max-width: 398px) {
+                margin-right: 0;
+            }
+        }
+
+        &--middle {
+            max-width: 460px;
+
+            @media (max-width: 992px) {
+                max-width: initial;
+                width: 70%;
+            }
+
+            @media (max-width: 664px) {
+                width: 100%;
+            }
+        }
+
+        &--last {
+
+            @media (max-width: 992px) {
+                position: absolute;
+                right: 0;
+                bottom: -50px;
+            }
+        }
+
+        @media (max-width: 398px) {
+            text-align: center;
+            width: 100%;
+        }
+
+        img {
+            width: 180px;
+        }
+    }
+
+    &__btn {
+        min-width: 130px;
+    }
+
+    &__adress {
+        display: inline-block;
+
+        @media (max-width: 664px) {
+            display: block;
+        }
+    }
+
+    &__link {  
+        text-decoration: underline;
+        margin-bottom: 10px;
+    }
+
+    &__pages {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+
+    &__num {
+        font-size: 21px;
+        color: #9fa8b0;
+        font-family: 'Open Sans Bold',sans-serif;
+        margin-right: 25px;
+
+        &--active {
+            color: #0066b3;
+        }
+    }
+}

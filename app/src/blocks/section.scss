@@ -1,0 +1,11 @@
+.section {
+    max-width: 1170px;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+
+    &__rel {
+        position: relative;
+    }
+}

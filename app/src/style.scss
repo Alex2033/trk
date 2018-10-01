@@ -1,0 +1,44 @@
+// Служебные файлы
+@import url('global/variables.scss'); // SASS переменные
+@import url('global/fonts.scss'); // Шрифты
+@import url('global/mixins.scss'); // Миксины
+@import url('global/global.scss'); // Глобальные стили
+// =====
+
+// Блоки
+@import url('blocks/title.scss'); // Заголовок
+@import url('blocks/menu.scss'); // Меню
+@import url('blocks/slick.scss'); // Меню
+@import url('blocks/hamburger.scss'); // Меню
+@import url('blocks/text.scss'); // Меню
+@import url('blocks/center.scss'); // Меню
+@import url('blocks/trade.scss'); // Меню
+@import url('blocks/zone.scss'); // Меню
+@import url('blocks/shares.scss'); // Меню
+@import url('blocks/censors.scss'); // Меню
+@import url('blocks/white.scss'); // Меню
+@import url('blocks/lease.scss'); // Меню
+@import url('blocks/mobile-menu.scss'); // Меню
+@import url('blocks/card.scss'); // Меню
+@import url('blocks/contact.scss'); // Меню
+@import url('blocks/shop.scss'); // Меню
+@import url('blocks/shops.scss'); // Меню
+@import url('blocks/about.scss'); // Меню
+@import url('blocks/search.scss'); // Меню
+@import url('blocks/example.scss'); // Меню
+@import url('blocks/zona.scss'); // Меню
+@import url('blocks/btn.scss'); // Стили кнопки в меню
+@import url('blocks/gallery.scss'); // Меню
+@import url('blocks/404.scss'); // 404-страница
+@import url('blocks/site-map.scss'); // карта сайта
+@import url('blocks/plan.scss'); // план сайта
+@import url('blocks/lease-form.scss'); // форма аренды
+@import url('blocks/custom-checkboxes.scss'); // кастомные чекбоксы
+
+// =====
+
+// Внешние контейнеры
+@import url('blocks/header.scss'); // Шапка
+@import url('blocks/footer.scss'); // Подвал
+@import url('blocks/section.scss'); // Секция контента
+// =====
