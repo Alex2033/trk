@@ -232,6 +232,7 @@ ol li {
   line-height: 40px;
   text-transform: uppercase;
   font-weight: bold;
+  position: relative;
 }
 
 .menu__nav {
@@ -2637,10 +2638,6 @@ ol li {
     display: none;
   }
 
-  .header__main {
-    height: 50px;
-  }
-
   .header__down {
     display: inline;
     width: 100%;
@@ -3073,10 +3070,6 @@ ol li {
     display: block;
     margin-right: auto;
     margin-left: auto;
-  }
-
-  .header__main {
-    height: 100px;
   }
 
   .header__plan {

@@ -179,7 +179,7 @@ $('.slider-nav').slick({
     });
 
     $('.menu').click(function(e){
-        event.preventDefault();
+        e.preventDefault();
         $('.menu__nav').toggleClass('header__block');
         $('.trade__list').removeClass('header__block');
         $(document).find('.mobile-menu__list').removeClass('header__block');
