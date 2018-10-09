@@ -138,3 +138,9 @@ ol {
 	width: 55px;
 	height: 55px;
 }
+
+.hidden-sm {
+	@media (max-width: 767px) {
+		display: none;
+	}
+}

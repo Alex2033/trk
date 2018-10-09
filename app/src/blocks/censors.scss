@@ -8,6 +8,19 @@
     &__slider {
         margin-top: 50px;
         margin-bottom: 50px;
+
+        @media (min-width: 768px) and (max-width: 992px) {
+
+            .slick-prev {
+                left: -20px;
+            }
+
+            .slick-next {
+                right: -20px;
+            }
+        }
+
+
     }
 
     &__item {
@@ -25,8 +38,15 @@
         }
 
         a {
+            transition: opacity .2s ease;
+            display: block;
+
             &:focus {
                 outline: none;
+            }
+
+            &:hover {
+                opacity: 0.8;
             }
         }
     }
