@@ -1800,7 +1800,15 @@ ol li {
   text-decoration: underline;
   text-transform: uppercase;
   display: block;
-  margin-right: 55px;
+  margin-right: 10px;
+  padding-left: 0;
+  border: 0;
+  background-color: transparent;
+  transition: opacity .2s ease;
+}
+
+.services-content__level:hover {
+  opacity: 0.8;
 }
 
 .services-content__body {
@@ -1920,6 +1928,18 @@ ol li {
 .services__mobile {
   padding-top: 0;
   margin-bottom: 15px;
+}
+
+.plan-text {
+  color: white;
+  font-size: 24px;
+  letter-spacing: 0.5px;
+}
+
+.backlight {
+  width: initial;
+  height: initial;
+  background-color: #ffc088;
 }
 
 .lease-form__title {
