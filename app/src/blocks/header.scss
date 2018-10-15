@@ -12,6 +12,15 @@
         }
     }
 
+    &__slide {
+        display: block;
+        transition: filter .15s ease;
+
+        &:hover {
+            filter: brightness(90%);
+        }
+    }
+
     &__slide-img {
         display: block;
         margin: auto;
@@ -27,6 +36,10 @@
 
     &__desktop {
         display: block;
+
+        a {
+            display: inline-block;
+        }
 
         @media (max-width: 1199px) {
             display: none;
@@ -65,14 +78,6 @@
         display: flex;
         align-items: center;
         flex-wrap: wrap;
-
-        @media (max-width: 1199px) {
-            height: 50px;
-        }
-
-        @media (max-width: 767px) {
-            height: 100px;
-        }
     }
 
     &__height {

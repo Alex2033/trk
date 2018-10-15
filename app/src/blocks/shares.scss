@@ -18,7 +18,10 @@
         text-align: justify;
 
         a {
+            transition: filter .15s ease;
+
             &:hover {
+                filter: brightness(95%);
                 text-decoration: none;
             }
         }
@@ -56,6 +59,8 @@
 .shares-content {
     padding-bottom: 100px;
     max-width: 862px;
+    margin-left: auto;
+    margin-right: auto;
 
     @media (max-width: $point-xl) {
         max-width: 100%;

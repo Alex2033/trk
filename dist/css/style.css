@@ -487,8 +487,6 @@ ol li {
 }
 
 .zone__bg {
-  background: url(../img/bg-zone.png) no-repeat;
-  background-size: 100%;
   position: absolute;
   top: 0;
   left: 0;
@@ -498,6 +496,11 @@ ol li {
   max-width: 1170px;
   right: 0;
   margin: auto;
+}
+
+.zone__bg img {
+  width: 100%;
+  object-fit: cover;
 }
 
 .zone__container {
@@ -531,7 +534,12 @@ ol li {
   text-align: justify;
 }
 
+.shares__down a {
+  transition: filter .15s ease;
+}
+
 .shares__down a:hover {
+  filter: brightness(95%);
   text-decoration: none;
 }
 
@@ -557,6 +565,8 @@ ol li {
 .shares-content {
   padding-bottom: 100px;
   max-width: 862px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .shares-slider .slick-slider {
@@ -760,6 +770,11 @@ ol li {
   border-radius: 20px;
   background-color: #e6f4ff;
   line-height: 35px;
+  transition: filter .15s ease;
+}
+
+.lease__btn:hover {
+  filter: brightness(95%);
 }
 
 .lease__btn--block {
@@ -786,6 +801,11 @@ ol li {
   max-height: 143px;
   height: 100%;
   overflow: hidden;
+  transition: filter .15s ease;
+}
+
+.lease__img:hover {
+  filter: brightness(80%);
 }
 
 .lease__img img {
@@ -858,6 +878,15 @@ ol li {
   text-transform: uppercase;
 }
 
+.card__link {
+  display: block;
+  transition: filter .2s ease;
+}
+
+.card__link:hover {
+  filter: brightness(90%);
+}
+
 .card__category {
   display: flex;
   justify-content: space-between;
@@ -865,6 +894,10 @@ ol li {
 
 .card__col {
   line-height: 28px;
+}
+
+.card__col a:hover {
+  text-decoration: underline;
 }
 
 .card__incity-items {
@@ -891,6 +924,16 @@ ol li {
 
 .card__down {
   margin-top: 25px;
+}
+
+.card__down a {
+  display: block;
+  max-width: 167px;
+  transition: filter .15s ease;
+}
+
+.card__down a:hover {
+  filter: brightness(95%);
 }
 
 .card__less-left {
@@ -946,6 +989,14 @@ ol li {
   width: 40%;
 }
 
+.card__side a {
+  transition: opacity .15s ease;
+}
+
+.card__side a:hover {
+  opacity: 0.8;
+}
+
 .card__side--1 {
   width: 60%;
   padding-right: 57px;
@@ -978,6 +1029,14 @@ ol li {
   margin-bottom: 10px;
 }
 
+.card__list-item a {
+  display: block;
+}
+
+.card__list-item a:hover {
+  text-decoration: underline;
+}
+
 .card-slider .slick-prev {
   left: -48px;
 }
@@ -1008,6 +1067,10 @@ ol li {
 
 .contact__item {
   width: 50%;
+}
+
+.contact__item .text {
+  margin-bottom: 5px;
 }
 
 .contact__item--second {
@@ -1124,6 +1187,11 @@ ol li {
 .contact__btn {
   margin-top: 30px;
   margin-bottom: 70px;
+  transition: filter .15s ease;
+}
+
+.contact__btn:hover {
+  filter: brightness(95%);
 }
 
 .user-form__button {
@@ -1132,6 +1200,11 @@ ol li {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   margin-top: 20px;
+  transition: filter .15s ease;
+}
+
+.user-form__button:hover {
+  filter: brightness(95%);
 }
 
 .shop {
@@ -1218,6 +1291,11 @@ ol li {
 
 .shops__btn {
   min-width: 130px;
+  transition: filter .15s ease;
+}
+
+.shops__btn:hover {
+  filter: brightness(95%);
 }
 
 .shops__adress {
@@ -1248,6 +1326,10 @@ ol li {
 
 .about__img {
   margin-bottom: 30px;
+}
+
+.search .lease__right-side {
+  padding-bottom: 20px;
 }
 
 .search__inp {
@@ -1429,6 +1511,11 @@ ol li {
   max-width: 255px;
   margin-right: 15px;
   margin-bottom: 40px;
+  transition: filter .15s ease;
+}
+
+.gallery__link:hover {
+  filter: brightness(80%);
 }
 
 .gallery__link--last {
@@ -1548,6 +1635,11 @@ ol li {
 .error-page__description p {
   color: #777b83;
   font-size: 18px;
+}
+
+.error-page__link {
+  display: inline-block;
+  font-weight: 500;
 }
 
 .site-map__container {
@@ -2082,6 +2174,15 @@ ol li {
   display: none;
 }
 
+.header__slide {
+  display: block;
+  transition: filter .15s ease;
+}
+
+.header__slide:hover {
+  filter: brightness(90%);
+}
+
 .header__slide-img {
   display: block;
   margin: auto;
@@ -2097,6 +2198,10 @@ ol li {
 
 .header__desktop {
   display: block;
+}
+
+.header__desktop a {
+  display: inline-block;
 }
 
 .header__angle-down {
@@ -2637,10 +2742,6 @@ ol li {
     display: none;
   }
 
-  .header__main {
-    height: 50px;
-  }
-
   .header__down {
     display: inline;
     width: 100%;
@@ -2680,6 +2781,11 @@ ol li {
   .zone__img {
     margin-top: 30px;
     margin-bottom: 15px;
+  }
+
+  .zone__bg {
+    max-width: 100%;
+    width: 100%;
   }
 
   .shares__none {
@@ -3073,10 +3179,6 @@ ol li {
     display: block;
     margin-right: auto;
     margin-left: auto;
-  }
-
-  .header__main {
-    height: 100px;
   }
 
   .header__plan {

@@ -12,8 +12,6 @@
     }
 
     &__bg {
-        background: url(../img/bg-zone.png) no-repeat;
-        background-size: 100%;
         position: absolute;
         top: 0;
         left: 0;
@@ -23,6 +21,16 @@
         max-width: 1170px;
         right: 0;
         margin: auto;
+
+        @media (max-width: 992px) {
+            max-width: 100%;
+            width: 100%;
+        }
+
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
     }
 
     &__container {

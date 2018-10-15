@@ -1,5 +1,13 @@
 .card {
     
+    &__link {
+        display: block;
+        transition: filter .2s ease;
+
+        &:hover {
+            filter: brightness(90%);
+        }
+    }
 
     &__category {
         display: flex;
@@ -12,6 +20,12 @@
 
     &__col {
         line-height: 28px;
+
+        a {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
     }
 
     &__incity-items {
@@ -58,6 +72,16 @@
 
     &__down {
         margin-top: 25px;
+
+        a {
+            display: block;
+            max-width: 167px;
+            transition: filter .15s ease;
+
+            &:hover {
+                filter: brightness(95%);
+            }
+        }
 
         @media (max-width: 767px) {
             text-align: center;
@@ -168,6 +192,14 @@
 
     &__side {
         width: 40%;
+
+        a {
+            transition: opacity .15s ease;
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
         
         &--1 {
             width: 60%;
@@ -213,6 +245,14 @@
     &__list-item {
         width: 30%;
         margin-bottom: 10px;
+
+        a {
+            display: block;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
 
         @media (max-width: 576px) {
             width: 50%;

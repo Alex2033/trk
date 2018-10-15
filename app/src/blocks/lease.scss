@@ -112,6 +112,12 @@
         background-color: #e6f4ff;
         line-height: 35px;
 
+        transition: filter .15s ease;
+
+            &:hover {
+                filter: brightness(95%);
+            }
+
         @media (max-width: 1199px) {
             display: none;
         }
@@ -150,6 +156,12 @@
         max-height: 143px;
         height: 100%;
         overflow: hidden;
+
+        transition: filter .15s ease;
+
+            &:hover {
+                filter: brightness(80%);
+            }
 
         img {
             height: 100%;

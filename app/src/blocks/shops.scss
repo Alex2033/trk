@@ -101,6 +101,11 @@
 
     &__btn {
         min-width: 130px;
+        transition: filter .15s ease;
+
+            &:hover {
+                filter: brightness(95%);
+            }
     }
 
     &__adress {
