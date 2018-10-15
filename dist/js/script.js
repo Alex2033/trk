@@ -145,39 +145,6 @@ $('.slider-nav').slick({
         }
     })
 
-    /*$('.header__menu-third').hover(function(){
-
-        $('.complex-list').removeClass('header__block');
-        $('.complex').find('.header__angle-down').removeClass('header__rotate');
-        $('.header__menu-sub').toggleClass('header__block');
-        $(this).find('.header__angle-down').toggleClass('header__rotate');
-    });*/
-
-
-
-    /*$('.header__menu-sub-link').hover(function(){
-        $('.header__menu-link-about').css({
-            'color':'#2f3d4f'
-        });
-        $('.header__menu-link-tradezone').css({
-            'color':'#2f3d4f'
-        });
-    });*/
-
-    /*$('.header__menu-link-about').hover(function(){
-        $(this).css({'color':'#0066b3'});
-    });
-    $('.header__menu-link-about').mouseout(function(){
-        $(this).css({'color':'#2f3d4f'});
-    });
-
-    $('.header__menu-link-tradezone').hover(function(){
-        $(this).css({'color':'#0066b3'});
-    });
-    $('.header__menu-link-tradezone').mouseout(function(){
-        $(this).css({'color':'#2f3d4f'});
-    });*/
-
     $('.mobile-menu').click(function(e){
         e.preventDefault();
         $('.mobile-menu__list').toggleClass('header__block');
@@ -189,14 +156,6 @@ $('.slider-nav').slick({
         $('.menu__nav').toggleClass('header__block');
         $('.trade__list').removeClass('header__block');
         $(document).find('.mobile-menu__list').removeClass('header__block');
-    });
-
-
-    $('.complex').hover(function(){
-        $('.header__menu-sub').removeClass('header__block');
-        $('.header__menu-third').find('.header__angle-down').removeClass('header__rotate');
-        $('.complex-list').toggleClass('header__block');
-        $(this).find('.header__angle-down').toggleClass('header__rotate');
     });
 
     $('#footer__complex').click(function(){
@@ -286,3 +245,14 @@ $(function() {
 		return false;
 	});
 });
+
+$(function() {
+    $('.header__menu-list').superfish();
+});
+
+$(function() {
+    $('.menu').click(function() {
+        $('.header__menu').toggleClass('active');
+    });
+});
+
