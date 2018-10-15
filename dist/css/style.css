@@ -200,6 +200,33 @@ ol li {
   height: 55px;
 }
 
+#scrollUp {
+  bottom: 20px;
+  right: 20px;
+  width: 59px;
+  height: 59px;
+  position: fixed;
+  z-index: 50;
+  border-radius: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  transition: .2s;
+  cursor: pointer;
+}
+
+#scrollUp:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.scrollUp__img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .title {
   color: #3c3c3b;
   font-size: 48px;
@@ -2929,7 +2956,18 @@ ol li {
   }
 }
 
+@media (max-width: 768px) and (max-width: 576px) {
+  .parking__payment-method {
+    max-width: 100%;
+  }
+}
+
 @media (max-width: 768px) {
+  #scrollUp {
+    width: 40px;
+    height: 40px;
+  }
+
   .hamburger {
     top: 10px;
   }
@@ -3052,12 +3090,6 @@ ol li {
 
   .footer__list {
     display: block;
-  }
-}
-
-@media (max-width: 768px) and (max-width: 576px) {
-  .parking__payment-method {
-    max-width: 100%;
   }
 }
 

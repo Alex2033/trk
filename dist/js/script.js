@@ -269,3 +269,20 @@ $(document).ready(function(){
 	    }, 400);
 	});
 });
+
+$(function() {
+	$(window).scroll(function() {
+		if ($(this).scrollTop() > 200) {
+			$("#scrollUp").fadeIn();
+		}
+		else {
+			$("#scrollUp").fadeOut();
+		}
+	});
+	$("#scrollUp").click(function() {
+		$("body, html").animate({
+			scrollTop: 0
+		}, 400);
+		return false;
+	});
+});

@@ -144,3 +144,35 @@ ol {
 		display: none;
 	}
 }
+
+#scrollUp {
+	bottom: 20px;
+	right: 20px;
+	width: 59px;
+	height: 59px;
+	position: fixed;
+	z-index: 50;
+	border-radius: 100%;
+	background-color: rgba(#000, .4);
+	display: none;
+	justify-content: center;
+	align-items: center;
+	transition: .2s;
+	cursor: pointer;
+
+	&:hover {
+		background-color: rgba(#000, .8);
+	}
+
+	@media (max-width: 768px) {
+		width: 40px;
+		height: 40px;
+	}
+}
+
+.scrollUp__img {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
