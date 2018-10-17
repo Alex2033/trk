@@ -1,0 +1,17 @@
+.categories {
+    margin: 0 0 10px 0;
+    padding: 0;
+    
+    a {
+        display: inline-block;
+        text-decoration: underline;
+        font-size: 14px;
+        vertical-align: top;
+        color: #9fa8b0;
+        font-family: 'Open Sans Regular', sans-serif;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}

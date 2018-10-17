@@ -256,3 +256,10 @@ $(function() {
     });
 });
 
+$(function() {
+    $(".shop-zone-content").not(":first").hide();
+    $(".shops__level").click(function() {
+        $(".shops__level").removeClass("active").eq($(this).index()).addClass("active");
+        $(".shop-zone-content").hide().eq($(this).index()).fadeIn()
+    }).eq(0).addClass("active");
+});

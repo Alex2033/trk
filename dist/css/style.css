@@ -769,6 +769,10 @@ ol li {
   text-decoration: none;
 }
 
+.lease__link.active {
+  font-weight: 700;
+}
+
 .lease__bread {
   position: relative;
   z-index: 5;
@@ -889,6 +893,10 @@ ol li {
   color: #3c3c3b;
   font-size: 16px;
   font-family: 'Open Sans Regular';
+}
+
+.mobile-menu__link.active {
+  font-weight: 700;
 }
 
 .mobile-menu__name {
@@ -1283,6 +1291,13 @@ ol li {
   text-transform: uppercase;
   display: inline-block;
   margin-right: 55px;
+  cursor: pointer;
+}
+
+.shops__level.active,
+.shops__level:hover {
+  color: #23527c;
+  text-decoration: none;
 }
 
 .shops__item {
@@ -2237,6 +2252,24 @@ ol li {
   border: solid white;
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
+}
+
+.categories {
+  margin: 0 0 10px 0;
+  padding: 0;
+}
+
+.categories a {
+  display: inline-block;
+  text-decoration: underline;
+  font-size: 14px;
+  vertical-align: top;
+  color: #9fa8b0;
+  font-family: 'Open Sans Regular', sans-serif;
+}
+
+.categories a:hover {
+  text-decoration: none;
 }
 
 .header {

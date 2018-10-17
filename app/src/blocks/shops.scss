@@ -8,6 +8,12 @@
         text-transform: uppercase;
         display: inline-block;
         margin-right: 55px;
+        cursor: pointer;
+        &.active, &:hover {
+            color: #23527c;
+            text-decoration: none;
+        }
+        
     }
 
     &__item {

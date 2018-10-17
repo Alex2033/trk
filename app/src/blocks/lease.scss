@@ -71,6 +71,10 @@
         &:hover {
             text-decoration: none;
         }
+
+        &.active {
+            font-weight: 700;
+        }
     }
 
     &__bread {
