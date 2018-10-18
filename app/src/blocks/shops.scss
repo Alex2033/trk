@@ -13,6 +13,10 @@
             color: #23527c;
             text-decoration: none;
         }
+
+        @media (max-width: 768px) {
+            margin-right: 0;
+        }
         
     }
 
@@ -31,6 +35,12 @@
 
     &__levels {
         margin-top: 80px;
+
+        @media (max-width: 768px) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
     }
 
     &__text {

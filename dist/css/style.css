@@ -1595,6 +1595,7 @@ ol li {
 .gallery__wrap-img {
   display: inline-block;
   height: 100%;
+  position: relative;
 }
 
 .gallery__wrap-img--video {
@@ -1606,47 +1607,56 @@ ol li {
   margin-right: 0;
 }
 
+.gallery__wrap-img .lease__img {
+  display: block;
+}
+
 .gallery__pull-left {
-  display: none;
-  top: -2px !important;
+  top: 0;
   margin: 0 !important;
-  height: 0;
+  position: absolute;
+  left: 0;
+  width: 30px;
+  background: #e4e4e4;
+  line-height: 85px;
+  border: 0;
+  height: 85px;
 }
 
 .gallery__pull-left:before {
   content: "\f104";
   font-family: 'fontawesome',sans-serif;
-  background: #e4e4e4;
   position: absolute;
-  left: -3px;
+  left: 0;
   display: block;
   background-size: 100%;
-  top: -3px;
-  height: initial;
-  width: 30px;
-  line-height: 85px;
+  top: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .gallery__pull-right {
-  top: 5px !important;
+  top: 0;
   margin: 0 !important;
   position: absolute;
-  right: 4px;
-  height: 0;
+  right: 0;
+  width: 30px;
+  background: #e4e4e4;
+  line-height: 85px;
+  border: 0;
+  height: 85px;
 }
 
 .gallery__pull-right:before {
   content: "\f105";
   font-family: 'fontawesome',sans-serif;
-  background: #e4e4e4;
   position: absolute;
-  left: -5px;
+  right: 0;
   display: block;
   background-size: 100%;
-  top: -7px !important;
-  height: initial;
-  width: 30px;
-  line-height: 85px;
+  top: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .gallery__name {
@@ -1669,7 +1679,7 @@ ol li {
   right: 0;
   margin: auto;
   text-align: center;
-  margin-top: -30px;
+  margin-top: -50px;
 }
 
 .gallery__play:focus {
@@ -2272,6 +2282,15 @@ ol li {
   text-decoration: none;
 }
 
+.categories span {
+  display: inline-block;
+  text-decoration: underline;
+  font-size: 14px;
+  vertical-align: top;
+  color: #9fa8b0;
+  font-family: 'Open Sans Regular', sans-serif;
+}
+
 .header {
   padding-top: 30px;
   position: relative;
@@ -2321,6 +2340,7 @@ ol li {
 .header__part {
   text-align: center;
   position: relative;
+  display: block;
 }
 
 .header__part--menu {
@@ -2794,6 +2814,26 @@ ol li {
   .parking__item-left {
     min-width: 75px;
   }
+
+  .footer .header__menu-list {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    margin-top: 15px;
+  }
+
+  .footer .header__menu-list .footer__side {
+    top: 35px;
+  }
+
+  .footer .header__menu-sub-link {
+    display: block;
+    line-height: 1;
+  }
+
+  .footer .header__menu-sub-item {
+    margin-bottom: 10px;
+  }
 }
 
 @media (max-width: 1199px) {
@@ -3013,6 +3053,10 @@ ol li {
   .header__phone {
     font-size: 14px;
   }
+
+  .header__menu-sub-link {
+    font-size: 13px;
+  }
 }
 
 @media (max-width: 890px) {
@@ -3063,6 +3107,10 @@ ol li {
     transform: translateY(8px) rotate(45deg);
   }
 
+  .lease__title {
+    margin-right: 20px;
+  }
+
   .card__less-item {
     display: flex !important;
     justify-content: center;
@@ -3076,6 +3124,16 @@ ol li {
 
   .contact__callback-form {
     top: 2%;
+  }
+
+  .shops__level {
+    margin-right: 0;
+  }
+
+  .shops__levels {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
   }
 
   .error-page__description p {
@@ -3201,6 +3259,7 @@ ol li {
 
   .lease__be-lease {
     justify-content: center;
+    flex-wrap: wrap;
   }
 
   .lease__images {
@@ -3330,10 +3389,6 @@ ol li {
     text-align: center;
   }
 
-  .footer__append {
-    display: none;
-  }
-
   .footer__here__append:after {
     display: inline-block;
   }
@@ -3353,6 +3408,27 @@ ol li {
   .shop-zone__item {
     width: 100%;
     margin-right: 0;
+  }
+
+  .footer__side {
+    position: static;
+  }
+
+  .footer .header__menu-list {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .footer .header__menu-item {
+    width: calc(33.3333% - 10px);
+    text-align: left;
+    margin-bottom: 25px;
+  }
+
+  .footer .header__menu-link {
+    display: block;
+    line-height: 1.2;
+    margin-bottom: 15px;
   }
 }
 
@@ -3575,6 +3651,12 @@ ol li {
     margin-bottom: 0;
   }
 
+  .lease__title {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
   .map-list {
     padding-left: 5px;
   }
@@ -3599,6 +3681,15 @@ ol li {
 
   .header__phone {
     font-size: 12px;
+  }
+
+  .footer .header__menu-list {
+    margin: 30px -10px -20px 0;
+  }
+
+  .footer .header__menu-item {
+    width: calc(50% - 10px);
+    margin-right: 10px;
   }
 }
 

@@ -145,8 +145,7 @@ $('.slider-nav').slick({
         }
     })
 
-    $('.mobile-menu').click(function(e){
-        e.preventDefault();
+    $('.mobile-menu').click(function(){
         $('.mobile-menu__list').toggleClass('header__block');
         $(document).find('.menu__nav').removeClass('header__block');
     });
