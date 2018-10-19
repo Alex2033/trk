@@ -70,14 +70,11 @@ $('.slider-nav').slick({
 
     var windowWidth = document.documentElement.clientWidth;
     if (windowWidth <= 768) {
-        $('.header__part--long').appendTo('#header__part');
         $('.lease__slider').slick({
             slidesToShow: 1,
             dots: true,
             arrows: false
         });
-    } else {
-        $('.header__part--long').appendTo('#header__part--desktop');
     }
 
     $('.lease__next').click(function(){
@@ -134,14 +131,11 @@ $('.slider-nav').slick({
         var windowWidth = document.documentElement.clientWidth;
 
         if (windowWidth <= 768) {
-            $('.header__part--long').appendTo('#header__part');
             $('.lease__slider').slick({
                 slidesToShow: 1,
                 dots: true,
                 arrows: false
             });
-        } else {
-            $('.header__part--long').appendTo('#header__part--desktop');
         }
     })
 

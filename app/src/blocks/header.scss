@@ -1,7 +1,15 @@
 .header {
-    padding-top: 30px;
     position: relative;
     z-index: 100;
+
+    &__top {
+        padding-top: 15px;
+        padding-bottom: 15px;
+
+        @media (max-width: 1199px) {
+            padding-bottom: 0;
+        }
+    }
 
     &__tablet {
         display: none;
@@ -70,10 +78,14 @@
     }
 
     &__main {
-
+        padding-bottom: 10px;
         display: flex;
         align-items: center;
         flex-wrap: wrap;
+
+        @media (max-width: 992px) {
+            align-items: center;
+        }
     }
 
     &__height {
@@ -87,20 +99,40 @@
         }
     }
 
+    &__center {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+
+        @media (max-width: 1200px) {
+            display: block;
+        }
+
+        @media (max-width: 767.1px) {
+            flex-wrap: wrap;
+        }
+
+        .header__down {
+            @media (max-width: 1199px) {
+                width: calc(50% - 4px);
+            }
+        }
+    }
+
     &__down {
-        display: inline-block;
-        width: 24.25%;
         text-align: center;
-        height: 40px;
         position: relative;
-        white-space: nowrap;
 
         &--menu {
         }
 
         @media (max-width: 1199px) {
-            display: inline;
+            display: inline-block;
             width: 100%;
+        }
+
+        @media (max-width: 480px) {
+            white-space: nowrap;
         }
     }
 
@@ -187,11 +219,18 @@
     }
 
     &__aquarium {
-        max-height: 50px;
+        max-height: 60px;
 
         @media (max-width: 648px) {
             position: relative;
         }
+
+        &-bottom {
+
+            > * {
+                margin-right: 10px;
+            }
+        } 
     }
 
 

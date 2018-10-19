@@ -4,6 +4,15 @@
     padding-top: 30px;
     padding-bottom: 20px;
 
+    .header__menu-sub-link {
+        display: block;
+        line-height: 1;
+    }
+
+    .header__menu-sub-item {
+        margin-bottom: 10px;
+    }
+
    &__phone {
     font-size: 16px;
    }
@@ -178,15 +187,6 @@
             .footer__side {
                 top: 35px;
             }
-        }
-
-        .header__menu-sub-link {
-            display: block;
-            line-height: 1;
-        }
-
-        .header__menu-sub-item {
-            margin-bottom: 10px;
         }
     }
 

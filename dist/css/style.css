@@ -512,6 +512,9 @@ ol li {
 .zone__img {
   margin-bottom: 30px;
   height: 100px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
 }
 
 .zone__bg {
@@ -550,6 +553,7 @@ ol li {
   color: #2f3d4f;
   margin-bottom: 18px;
   margin-top: 20px;
+  display: block;
 }
 
 .shares__container {
@@ -674,6 +678,11 @@ ol li {
 .censors__slider {
   margin-top: 50px;
   margin-bottom: 50px;
+}
+
+.censors__slider .slick-track {
+  display: flex;
+  align-items: center;
 }
 
 .censors__item:focus {
@@ -825,6 +834,18 @@ ol li {
   justify-content: space-between;
 }
 
+.lease__images-down .lease__img {
+  display: block;
+  width: calc(33.3333% - 15px);
+  height: 190px;
+  max-height: 190px;
+}
+
+.lease__images-down .lease__img img {
+  width: 100%;
+  object-fit: cover;
+}
+
 .lease__img {
   max-height: 143px;
   height: 100%;
@@ -924,6 +945,20 @@ ol li {
   justify-content: space-between;
 }
 
+.card__category .card__col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.card__category a {
+  display: inline-block;
+}
+
+.card__category a:hover {
+  color: #0066b3;
+}
+
 .card__col {
   line-height: 28px;
 }
@@ -937,6 +972,14 @@ ol li {
   justify-content: space-between;
   width: 70%;
   align-items: flex-start;
+}
+
+.card__incity-items img {
+  width: 180px;
+}
+
+.card__incity-item a {
+  text-decoration: underline;
 }
 
 .card__text {
@@ -969,10 +1012,27 @@ ol li {
   filter: brightness(95%);
 }
 
+.card__down .lease__img {
+  display: block;
+}
+
+.card__less-item {
+  display: flex !important;
+}
+
+.card__less-item a {
+  text-decoration: underline;
+}
+
 .card__less-left {
   vertical-align: top;
   margin-right: 30px;
   display: inline-block;
+  flex-shrink: 0;
+}
+
+.card__less-left img {
+  width: 180px;
 }
 
 .card__less-right {
@@ -982,40 +1042,44 @@ ol li {
 
 .card__shares {
   background-size: cover;
-  height: 228px;
+  height: 0;
+  padding-bottom: 59%;
   max-width: 405px;
   width: 100%;
+  background-position: 85% 50%;
 }
 
 .card__shares--1 {
-  background: url(../img/shares-4.png) no-repeat;
-  background-position-x: -105px;
-  background-size: 130% 100%;
+  background-image: url(../img/shares-4.png);
+  background-repeat: no-repeat;
 }
 
 .card__shares--2 {
-  background: url(../img/shares-5.png) no-repeat;
-  background-position-x: -105px;
-  background-size: 130% 100%;
+  background-image: url(../img/shares-5.png);
+  background-repeat: no-repeat;
 }
 
 .card__side-img {
-  width: 195px;
   height: 105px;
+  width: 100%;
 }
 
 .card__side-img--1 {
   background: url(../img/card-1.png) no-repeat;
-  background-position-x: -40px;
+  background-size: cover;
 }
 
 .card__side-img--2 {
   background: url(../img/card-2.png) no-repeat;
-  background-position-x: -20px;
+  background-size: cover;
 }
 
 .card__images-down {
-  justify-content: center;
+  justify-content: space-between;
+}
+
+.card__images-down .lease__img {
+  width: calc(50% - 8px);
 }
 
 .card__side {
@@ -1068,6 +1132,7 @@ ol li {
 
 .card__list-item a:hover {
   text-decoration: underline;
+  color: #0066b3;
 }
 
 .card-slider .slick-prev {
@@ -1075,7 +1140,7 @@ ol li {
 }
 
 .card-slider .slick-next {
-  right: -35px;
+  right: -43px;
 }
 
 .card-slider .slick-arrow {
@@ -1361,6 +1426,7 @@ ol li {
 
 .about__img {
   margin-bottom: 30px;
+  height: 226px;
 }
 
 .search .lease__right-side {
@@ -1506,6 +1572,7 @@ ol li {
   display: block;
   width: 100%;
   object-fit: cover;
+  max-height: 251px;
 }
 
 .shop-zone__item h6 {
@@ -1688,6 +1755,7 @@ ol li {
 
 .error-page {
   text-align: center;
+  background-color: #fff;
 }
 
 .error-page__title {
@@ -2292,9 +2360,13 @@ ol li {
 }
 
 .header {
-  padding-top: 30px;
   position: relative;
   z-index: 100;
+}
+
+.header__top {
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 .header__tablet {
@@ -2348,6 +2420,7 @@ ol li {
 }
 
 .header__main {
+  padding-bottom: 10px;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -2357,13 +2430,15 @@ ol li {
   height: 100%;
 }
 
+.header__center {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
 .header__down {
-  display: inline-block;
-  width: 24.25%;
   text-align: center;
-  height: 40px;
   position: relative;
-  white-space: nowrap;
 }
 
 .header__time {
@@ -2429,7 +2504,11 @@ ol li {
 }
 
 .header__aquarium {
-  max-height: 50px;
+  max-height: 60px;
+}
+
+.header__aquarium-bottom > * {
+  margin-right: 10px;
 }
 
 .header__plan {
@@ -2602,6 +2681,15 @@ ol li {
   border-top: 1px solid #e6e6ee;
   padding-top: 30px;
   padding-bottom: 20px;
+}
+
+.footer .header__menu-sub-link {
+  display: block;
+  line-height: 1;
+}
+
+.footer .header__menu-sub-item {
+  margin-bottom: 10px;
 }
 
 .footer__phone {
@@ -2815,6 +2903,10 @@ ol li {
     min-width: 75px;
   }
 
+  .header__center {
+    display: block;
+  }
+
   .footer .header__menu-list {
     flex-direction: row;
     justify-content: space-between;
@@ -2825,14 +2917,11 @@ ol li {
   .footer .header__menu-list .footer__side {
     top: 35px;
   }
+}
 
-  .footer .header__menu-sub-link {
-    display: block;
-    line-height: 1;
-  }
-
-  .footer .header__menu-sub-item {
-    margin-bottom: 10px;
+@media (max-width: 1199.1px) {
+  .card__shares {
+    max-width: 100%;
   }
 }
 
@@ -2874,6 +2963,10 @@ ol li {
     top: 0;
   }
 
+  .header__top {
+    padding-bottom: 0;
+  }
+
   .header__tablet {
     display: block;
     margin-top: 30px;
@@ -2883,8 +2976,12 @@ ol li {
     display: none;
   }
 
+  .header__center .header__down {
+    width: calc(50% - 4px);
+  }
+
   .header__down {
-    display: inline;
+    display: inline-block;
     width: 100%;
   }
 
@@ -2972,6 +3069,7 @@ ol li {
     margin: 0 auto 35px;
     width: 100%;
     max-width: 700px;
+    text-align: center;
   }
 
   .card__incity-items {
@@ -3050,6 +3148,10 @@ ol li {
     align-items: flex-start;
   }
 
+  .header__main {
+    align-items: center;
+  }
+
   .header__phone {
     font-size: 14px;
   }
@@ -3105,21 +3207,6 @@ ol li {
     -ms-transform: translateY(8px) rotate(45deg);
     -o-transform: translateY(8px) rotate(45deg);
     transform: translateY(8px) rotate(45deg);
-  }
-
-  .lease__title {
-    margin-right: 20px;
-  }
-
-  .card__less-item {
-    display: flex !important;
-    justify-content: center;
-    margin-bottom: 15px;
-    text-align: center;
-  }
-
-  .card__less-left {
-    margin-right: 10px;
   }
 
   .contact__callback-form {
@@ -3230,6 +3317,84 @@ ol li {
   }
 }
 
+@media (max-width: 767.1px) {
+  .lease .lease__be-lease {
+    margin-bottom: 20px;
+  }
+
+  .lease .title {
+    margin-right: 20px;
+  }
+
+  .lease .slick-slider .slick-track {
+    display: flex;
+    align-items: center;
+  }
+
+  .lease__images-down .lease__img {
+    height: initial;
+    max-height: initial;
+  }
+
+  .card__less-item {
+    justify-content: center;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  .card__less-left {
+    margin-right: 0;
+  }
+
+  .card__side-img {
+    height: 0;
+    padding-bottom: 50%;
+  }
+
+  .contact__phone .text {
+    margin-bottom: 0;
+  }
+
+  .contact__name--nomarg {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .shop-zone {
+    margin-right: 0;
+  }
+
+  .shop-zone__item {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .header__center {
+    flex-wrap: wrap;
+  }
+
+  .footer__side {
+    position: static;
+  }
+
+  .footer .header__menu-list {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .footer .header__menu-item {
+    width: calc(33.3333% - 10px);
+    text-align: left;
+    margin-bottom: 25px;
+  }
+
+  .footer .header__menu-link {
+    display: block;
+    line-height: 1.2;
+    margin-bottom: 15px;
+  }
+}
+
 @media (max-width: 767px) {
   .hidden-sm {
     display: none;
@@ -3260,6 +3425,7 @@ ol li {
   .lease__be-lease {
     justify-content: center;
     flex-wrap: wrap;
+    margin-bottom: 0;
   }
 
   .lease__images {
@@ -3307,14 +3473,11 @@ ol li {
   .card__shares {
     margin-right: auto;
     margin-left: auto;
+    padding-bottom: 40%;
   }
 
   .card__shares--2 {
     margin-top: 30px;
-  }
-
-  .card__side-img--1 {
-    background-position-x: 0;
   }
 
   .card__side--1 {
@@ -3332,6 +3495,10 @@ ol li {
 
   .card-slider .slick-next {
     right: 10px;
+  }
+
+  .contact .title {
+    margin-bottom: 20px;
   }
 
   .about__detailed {
@@ -3400,38 +3567,6 @@ ol li {
   }
 }
 
-@media (max-width: 767.1px) {
-  .shop-zone {
-    margin-right: 0;
-  }
-
-  .shop-zone__item {
-    width: 100%;
-    margin-right: 0;
-  }
-
-  .footer__side {
-    position: static;
-  }
-
-  .footer .header__menu-list {
-    align-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  .footer .header__menu-item {
-    width: calc(33.3333% - 10px);
-    text-align: left;
-    margin-bottom: 25px;
-  }
-
-  .footer .header__menu-link {
-    display: block;
-    line-height: 1.2;
-    margin-bottom: 15px;
-  }
-}
-
 @media (max-width: 664px) {
   .shops__text {
     margin-top: 30px;
@@ -3470,12 +3605,29 @@ ol li {
 }
 
 @media (max-width: 576px) {
+  .shares-section__title {
+    margin-bottom: 20px;
+  }
+
   .shares-content {
     padding-bottom: 30px;
   }
 
   .shares-slider__img {
     padding-bottom: 65%;
+  }
+
+  .lease .title {
+    margin-right: 0;
+  }
+
+  .lease__title {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .card__side-img {
+    padding-bottom: 100%;
   }
 
   .card__list-item {
@@ -3493,6 +3645,10 @@ ol li {
 
   .contact__name {
     margin-top: 10px;
+  }
+
+  .contact__name--nomarg {
+    margin-top: 0;
   }
 
   .user-form__button {
@@ -3603,6 +3759,10 @@ ol li {
   .error-page__text {
     font-size: 25px;
   }
+
+  .header__down {
+    white-space: nowrap;
+  }
 }
 
 @media (max-width: 450px) {
@@ -3616,16 +3776,6 @@ ol li {
 @media (max-width: 420px) {
   .card__list-item {
     width: 100%;
-  }
-}
-
-@media (max-width: 400px) {
-  .card__shares--1 {
-    background-position-x: -80px;
-  }
-
-  .card__shares--2 {
-    background-position-x: -80px;
   }
 }
 
@@ -3651,10 +3801,8 @@ ol li {
     margin-bottom: 0;
   }
 
-  .lease__title {
-    width: 100%;
-    margin-right: 0;
-    margin-bottom: 15px;
+  .shares-section__title {
+    margin-bottom: 20px;
   }
 
   .map-list {
@@ -3690,6 +3838,16 @@ ol li {
   .footer .header__menu-item {
     width: calc(50% - 10px);
     margin-right: 10px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 992px) {
+  .shares__down {
+    text-align: center;
+  }
+
+  .shares__down > *:not(:last-child) {
+    margin-right: 30px;
   }
 }
 

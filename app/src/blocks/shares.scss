@@ -6,6 +6,7 @@
         color: $color-text;
         margin-bottom: 18px;
         margin-top: 20px;
+        display: block;
     }
 
     &__container {
@@ -31,6 +32,16 @@
             display: inline-block;
             width: 100%;
         }
+
+        @media (min-width: $point-sm) and (max-width: $point-lg) {
+            text-align: center;
+
+            > * {
+                &:not(:last-child) {
+                    margin-right: 30px;
+                }
+            }
+        }
     }
 
     &__btn {
@@ -52,6 +63,14 @@
     &-section {
         &__title {
             margin: 0;
+
+            @media (max-width: $point-sm) {
+                margin-bottom: 20px;
+            }
+
+            @media (max-width: 375px) {
+                margin-bottom: 20px;
+            }
         }
     }
 }
@@ -165,6 +184,7 @@
         margin: 0 auto 35px;
         width: 100%;
         max-width: 700px;
+        text-align: center;
     }
 }
 
