@@ -22,14 +22,13 @@
 
     &__item {
         display: flex;
-        justify-content: space-between;
         align-items: center;
         margin-bottom: 50px;
         position: relative;
 
         @media (max-width: 992px) {
             flex-wrap: wrap;
-            margin-bottom: 80px;
+            margin-bottom: 50px;
         }
     }
 
@@ -50,11 +49,6 @@
     }
 
     &__up {
-
-        @media (max-width: 664px) {
-            display: none;
-        }
-
         &--block {
             display:none;
 
@@ -73,35 +67,51 @@
 
     &__side {
 
+        @media (max-width: 767.1px) {
+            text-align: center;
+        }
+
         &--first {
+            margin-right: 50px;
+
             @media (max-width: 992px) {
-                margin-right: 10px;
+                margin-right: 20px;
             }
 
-            @media (max-width: 398px) {
+            @media (max-width: 767.1px) {
                 margin-right: 0;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                margin-bottom: 10px;
             }
         }
 
         &--middle {
-            max-width: 460px;
+            max-width: 600px;
 
             @media (max-width: 992px) {
                 max-width: initial;
-                width: 70%;
+                width: 64%;
             }
 
-            @media (max-width: 664px) {
+            @media (max-width: 767.1px) {
                 width: 100%;
+                margin-bottom: 15px;
             }
         }
 
         &--last {
 
-            @media (max-width: 992px) {
+            @media (max-width: 991.1px) {
                 position: absolute;
                 right: 0;
                 bottom: -50px;
+            }
+
+            @media (max-width: 767.1px) {
+                width: 100%;
+                position: static;
             }
         }
 

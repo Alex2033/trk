@@ -240,4 +240,13 @@
             }
         }
     }
+
+    &__bottom-block {
+        text-align: center;
+        margin-bottom: 30px;
+
+        @media (max-width: 767.1px) {
+            margin-top: 30px;
+        }
+    }
 }

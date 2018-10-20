@@ -33,15 +33,6 @@
             width: 100%;
         }
 
-        @media (min-width: $point-sm) and (max-width: $point-lg) {
-            text-align: center;
-
-            > * {
-                &:not(:last-child) {
-                    margin-right: 30px;
-                }
-            }
-        }
     }
 
     &__btn {
@@ -177,10 +168,16 @@
     max-width: 370px;
 
     @media (max-width: $point-xl) {
-        margin: 0 20px 35px;
+        margin: 0 40px 35px 0;
+        width: calc(50% - 40px);
+        max-width: 100%;
+
+        img {
+            width: 100%;
+        }
     }
 
-    @media (max-width: $point-lg) {
+    @media (max-width: 767.1px) {
         margin: 0 auto 35px;
         width: 100%;
         max-width: 700px;
