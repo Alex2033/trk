@@ -605,6 +605,28 @@ ol li {
   margin-bottom: 45px;
 }
 
+.shares-slider .slick-track {
+  display: flex;
+  align-items: center;
+}
+
+.shares-slider img {
+  height: 362px;
+  object-fit: cover;
+}
+
+.shares-slider .slick-slide {
+  outline: 0;
+}
+
+.shares-slider .slick-prev {
+  left: 10px;
+}
+
+.shares-slider .slick-next {
+  right: 10px;
+}
+
 .shares-slider .slick-dots {
   bottom: 7%;
 }
@@ -630,15 +652,6 @@ ol li {
   border-radius: 50%;
   background-color: #2f3d4f;
   transform: translate(-50%, -50%);
-}
-
-.shares-slider__img {
-  display: block;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50% 100%;
-  height: 0;
-  padding-bottom: 42%;
 }
 
 .shares-content__text {
@@ -669,6 +682,10 @@ ol li {
   margin-bottom: 50px;
   flex-grow: 1;
   max-width: 370px;
+}
+
+.tenant-shares {
+  margin-bottom: 50px;
 }
 
 .censors {
@@ -1062,12 +1079,12 @@ ol li {
 }
 
 .card__side-img--1 {
-  background: url(../img/card-1.png) no-repeat;
+  background-repeat: no-repeat;
   background-size: cover;
 }
 
 .card__side-img--2 {
-  background: url(../img/card-2.png) no-repeat;
+  background-repeat: no-repeat;
   background-size: cover;
 }
 
@@ -2369,6 +2386,28 @@ ol li {
   font-family: 'Open Sans Regular', sans-serif;
 }
 
+.hidden-categories {
+  border: 0;
+  background-color: transparent;
+  cursor: default;
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.hidden-categories .hamburger {
+  position: static;
+  display: none;
+}
+
+.hidden-categories:focus {
+  outline: 0;
+}
+
+.category-title.lease__title {
+  width: 100%;
+}
+
 .header {
   position: relative;
   z-index: 100;
@@ -2427,6 +2466,7 @@ ol li {
 
 .header__part--menu {
   max-width: 167px;
+  width: 100%;
 }
 
 .header__main {
@@ -2651,6 +2691,9 @@ ol li {
 
 .header__right-menu {
   padding-top: 7px;
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
 }
 
 .header__menu-item:hover .header__menu-link {
@@ -2825,6 +2868,10 @@ ol li {
   html {
     font-size: 8px;
   }
+
+  .card__category {
+    display: flex !important;
+  }
 }
 
 @media (min-width: 992px) {
@@ -2856,6 +2903,10 @@ ol li {
 
   .shares-content {
     max-width: 100%;
+  }
+
+  .shares-slider img {
+    height: 450px;
   }
 
   .shares-content__row {
@@ -2917,10 +2968,6 @@ ol li {
 
   .parking__item-left {
     min-width: 75px;
-  }
-
-  .header__center {
-    display: block;
   }
 
   .footer .header__menu-list {
@@ -2986,8 +3033,20 @@ ol li {
     display: none;
   }
 
+  .header__main-left {
+    width: 75%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header__main-right {
+    width: 25%;
+  }
+
   .header__center .header__down {
-    width: calc(50% - 4px);
+    width: 100%;
   }
 
   .header__down {
@@ -3075,6 +3134,10 @@ ol li {
 
   .shares__none {
     display: none;
+  }
+
+  .shares-slider img {
+    height: initial;
   }
 
   .shares-content__row {
@@ -3228,12 +3291,6 @@ ol li {
     margin-right: 0;
   }
 
-  .shops__levels {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-
   .error-page__description p {
     font-size: 14px;
   }
@@ -3328,6 +3385,175 @@ ol li {
   }
 }
 
+@media (max-width: 767.1px) {
+  .shares-slider .slick-arrow {
+    width: 35px;
+    height: 35px;
+  }
+
+  .shares-slider .slick-arrow::before {
+    width: 35px;
+    height: 35px;
+  }
+
+  .shares-content__block {
+    margin: 0 auto 35px;
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+  }
+
+  .lease .lease__be-lease {
+    margin-bottom: 20px;
+  }
+
+  .lease .title {
+    margin-right: 20px;
+  }
+
+  .lease .slick-slider .slick-track {
+    display: flex;
+    align-items: center;
+  }
+
+  .lease__images-down .lease__img {
+    height: initial;
+    max-height: initial;
+  }
+
+  .lease__bottom-block {
+    margin-top: 30px;
+  }
+
+  .card__less-item {
+    justify-content: center;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  .card__less-left {
+    margin-right: 0;
+  }
+
+  .card__side-img {
+    height: 0;
+    padding-bottom: 50%;
+  }
+
+  .card-slider {
+    margin-top: 15px;
+  }
+
+  .contact__phone .text {
+    margin-bottom: 0;
+  }
+
+  .contact__name--nomarg {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .shops__levels {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 30px;
+  }
+
+  .shops__side {
+    text-align: center;
+  }
+
+  .shops__side--first {
+    margin-right: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .shops__side--middle {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .shops__side--last {
+    width: 100%;
+    position: static;
+  }
+
+  .about__img {
+    height: initial;
+  }
+
+  .search__sort {
+    margin-bottom: 5px;
+  }
+
+  .sort-date {
+    margin-bottom: 20px;
+  }
+
+  .shop-zone {
+    margin-right: 0;
+  }
+
+  .shop-zone__item {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .hidden-categories {
+    background-color: #0066b3;
+    color: #ffffff;
+    font-size: 18px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  .hidden-categories .hamburger {
+    display: block;
+    margin-right: 15px;
+  }
+
+  .header__main-left {
+    width: 50%;
+  }
+
+  .header__main-right {
+    width: 50%;
+  }
+
+  .header__center {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer__side {
+    position: static;
+  }
+
+  .footer .header__menu-list {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .footer .header__menu-item {
+    width: calc(33.3333% - 10px);
+    text-align: left;
+    margin-bottom: 25px;
+  }
+
+  .footer .header__menu-link {
+    display: block;
+    line-height: 1.2;
+    margin-bottom: 15px;
+  }
+}
+
 @media (max-width: 767px) {
   .hidden-sm {
     display: none;
@@ -3379,6 +3605,9 @@ ol li {
 
   .card__category {
     flex-wrap: wrap;
+    display: none;
+    background-color: #ddeefc;
+    padding: 10px 15px;
   }
 
   .card__incity-items {
@@ -3393,6 +3622,7 @@ ol li {
 
   .card__hand {
     flex-wrap: wrap;
+    margin-top: 15px;
   }
 
   .card__down {
@@ -3407,6 +3637,11 @@ ol li {
     margin-right: auto;
     margin-left: auto;
     margin-top: 30px;
+    height: initial;
+  }
+
+  .card__shares img {
+    height: initial;
   }
 
   .card__side--1 {
@@ -3448,6 +3683,10 @@ ol li {
 
   .gallery__wrap-img--video {
     margin-right: 0;
+  }
+
+  .category-title.lease__title {
+    margin-bottom: 0;
   }
 
   .header__part--menu {
@@ -3496,129 +3735,6 @@ ol li {
   }
 }
 
-@media (max-width: 767.1px) {
-  .shares-content__block {
-    margin: 0 auto 35px;
-    width: 100%;
-    max-width: 700px;
-    text-align: center;
-  }
-
-  .lease .lease__be-lease {
-    margin-bottom: 20px;
-  }
-
-  .lease .title {
-    margin-right: 20px;
-  }
-
-  .lease .slick-slider .slick-track {
-    display: flex;
-    align-items: center;
-  }
-
-  .lease__images-down .lease__img {
-    height: initial;
-    max-height: initial;
-  }
-
-  .lease__bottom-block {
-    margin-top: 30px;
-  }
-
-  .card__less-item {
-    justify-content: center;
-    margin-bottom: 15px;
-    text-align: center;
-  }
-
-  .card__less-left {
-    margin-right: 0;
-  }
-
-  .card__side-img {
-    height: 0;
-    padding-bottom: 50%;
-  }
-
-  .contact__phone .text {
-    margin-bottom: 0;
-  }
-
-  .contact__name--nomarg {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-
-  .shops__side {
-    text-align: center;
-  }
-
-  .shops__side--first {
-    margin-right: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 10px;
-  }
-
-  .shops__side--middle {
-    width: 100%;
-    margin-bottom: 15px;
-  }
-
-  .shops__side--last {
-    width: 100%;
-    position: static;
-  }
-
-  .about__img {
-    height: initial;
-  }
-
-  .search__sort {
-    margin-bottom: 5px;
-  }
-
-  .sort-date {
-    margin-bottom: 20px;
-  }
-
-  .shop-zone {
-    margin-right: 0;
-  }
-
-  .shop-zone__item {
-    width: 100%;
-    margin-right: 0;
-  }
-
-  .header__center {
-    flex-wrap: wrap;
-  }
-
-  .footer__side {
-    position: static;
-  }
-
-  .footer .header__menu-list {
-    align-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  .footer .header__menu-item {
-    width: calc(33.3333% - 10px);
-    text-align: left;
-    margin-bottom: 25px;
-  }
-
-  .footer .header__menu-link {
-    display: block;
-    line-height: 1.2;
-    margin-bottom: 15px;
-  }
-}
-
 @media (max-width: 664px) {
   .shops__text {
     margin-top: 30px;
@@ -3657,12 +3773,9 @@ ol li {
     padding-bottom: 30px;
   }
 
-  .shares-slider__img {
-    padding-bottom: 65%;
-  }
-
   .lease .title {
     margin-right: 0;
+    margin-bottom: 15px;
   }
 
   .lease__title {
@@ -3778,10 +3891,6 @@ ol li {
 }
 
 @media (max-width: 500px) {
-  .shares-slider__img {
-    background-position-x: 100%;
-  }
-
   .card-slider .slick-prev {
     left: -8px;
   }

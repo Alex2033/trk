@@ -33,7 +33,7 @@ $('.slider-nav').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         dots: true,
-        arrows: false
+        arrows: true
     });
 
     /* Табы на странице Плана сайта */
@@ -194,6 +194,14 @@ $('.slider-nav').slick({
             $(this).prop('checked', true);
         }); 
     }
+    
+    $(function(){
+        $('input[type="radio"]').click(function(){
+            $(this).attr('checked', function(index, attr){
+            return attr ? null : 'checked';
+            });
+        });
+    });
 
     $('.card-slider').slick({
         slidesToShow: 2,
@@ -255,4 +263,27 @@ $(function() {
         $(".shops__level").removeClass("active").eq($(this).index()).addClass("active");
         $(".shop-zone-content").hide().eq($(this).index()).fadeIn()
     }).eq(0).addClass("active");
+});
+
+function hideCaregories() {
+
+    var $containerWidth = $(window).width();
+
+    if ($containerWidth <= 767) {
+        $('.hidden-categories').click(function() {
+            if ($('.card__category').is(":visible")) {
+                $('.card__category').hide();
+            } else {
+                $('.card__category').show();
+            }
+            
+        });
+    } else {
+        $('.hidden-categories').unbind('click');
+    }
+    
+}
+
+$(document).ready(function () {
+    hideCaregories();
 });

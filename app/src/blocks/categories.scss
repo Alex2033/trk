@@ -24,3 +24,45 @@
         font-family: 'Open Sans Regular', sans-serif;
     }
 }
+
+.hidden-categories {
+    border: 0;
+    background-color: transparent;
+    cursor: default;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    
+
+    .hamburger {
+        position: static;
+        display: none;
+    }
+
+    &:focus {
+        outline: 0;
+    }
+
+    @media (max-width: 767.1px) {
+        background-color: $accent-color;
+        color: #ffffff;
+        font-size: 18px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        text-transform: uppercase;
+        font-weight: 700;
+
+        .hamburger {
+            display: block;
+            margin-right: 15px;
+        }
+    }
+}
+
+.category-title.lease__title {
+    width: 100%;
+
+    @media (max-width: 767px) {
+        margin-bottom: 0;
+    }
+}
