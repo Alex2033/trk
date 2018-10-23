@@ -18,6 +18,8 @@
             display: none;
             background-color: #ddeefc;
             padding: 10px 15px;
+            width: calc(100% + 30px);
+            margin-left: -15px;
         }
 
         @media (min-width: 768px) {
@@ -130,6 +132,14 @@
             text-decoration: underline;
         }
 
+        .card__less-name {
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
         @media (max-width: 767.1px) {
             justify-content: center;
             margin-bottom: 15px;
@@ -152,6 +162,15 @@
         margin-right: 30px;
         display: inline-block;
         flex-shrink: 0;
+
+        a {
+            display: block;
+            transition: opacity .2s ease;
+
+            &:hover {
+                opacity: 0.9;
+            }
+        }
 
         img {
             width: 180px;
@@ -277,6 +296,7 @@
         font-family: 'Open Sans SemiBold',sans-serif;
         font-size: 18px;
         color: #2f3d4f;
+        display: inline-block;
     }
 
     &__list {
