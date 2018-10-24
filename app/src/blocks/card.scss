@@ -14,18 +14,6 @@
         display: flex;
         justify-content: space-between;
 
-<<<<<<< HEAD
-=======
-        @media (max-width: 767px) {
-            flex-wrap: wrap;
-            display: none;
-            background-color: #ddeefc;
-            padding: 10px 15px;
-            width: calc(100% + 30px);
-            margin-left: -15px;
-        }
-
->>>>>>> 1a1a1849f9494b5d556a41fda4386687678a12d9
         @media (min-width: 768px) {
             display: flex !important;
         }
@@ -319,9 +307,10 @@
     &__list-item {
         width: 30%;
         margin-bottom: 10px;
+        font-size: 1rem;
 
         a {
-            display: block;
+            display: inline-block;
 
             &:hover {
                 text-decoration: underline;
@@ -393,5 +382,7 @@
         display: none;
         background-color: #ddeefc;
         padding: 10px 15px;
+        width: calc(100% + 30px);
+        margin-left: -15px;
     }
 }

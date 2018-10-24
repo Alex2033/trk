@@ -35,10 +35,10 @@
 }
 
 .hamburger.is-active .line:nth-child(1){
-  -webkit-transform: translateY(12px) rotate(45deg);
-  -ms-transform: translateY(12px) rotate(45deg);
-  -o-transform: translateY(12px) rotate(45deg);
-  transform: translateY(12px) rotate(45deg);
+  -webkit-transform: translateY(8px) rotate(45deg);
+  -ms-transform: translateY(8px) rotate(45deg);
+  -o-transform: translateY(8px) rotate(45deg);
+  transform: translateY(8px) rotate(45deg);
 
   @media (max-width: 768px) {
     -webkit-transform: translateY(6px) rotate(45deg);
@@ -56,8 +56,8 @@
 }
 
 .menu .hamburger.is-active .line:nth-child(3){
-  -webkit-transform: translateY(-6px) rotate(-45deg);
-  -ms-transform: translateY(-6px) rotate(-45deg);
-  -o-transform: translateY(-6px) rotate(-45deg);
-  transform: translateY(-6px) rotate(-45deg);
+  -webkit-transform: translateY(-7px) rotate(-45deg);
+  -ms-transform: translateY(-7px) rotate(-45deg);
+  -o-transform: translateY(-7px) rotate(-45deg);
+  transform: translateY(-7px) rotate(-45deg);
 }

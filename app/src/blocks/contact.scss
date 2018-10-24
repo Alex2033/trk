@@ -220,3 +220,11 @@
         margin-top: 10px;
     }
 }
+
+#map {
+    height: 461px;
+
+    @media (max-width: 767.1px) {
+        height: 230px;
+    }
+}
