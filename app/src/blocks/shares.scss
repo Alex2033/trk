@@ -21,6 +21,9 @@
 
         a {
             transition: filter .15s ease;
+            display: inline-block;
+            max-width: 167px;
+            width: 100%;
 
             &:hover {
                 filter: brightness(95%);
@@ -114,6 +117,8 @@
     }
 
     .slick-arrow {
+        margin-top: 0;
+        transform: translateY(-50%);
         @media (max-width: 767.1px) {
             width: 35px;
             height: 35px;
@@ -135,10 +140,24 @@
     .slick-dots {
         bottom: 7%;
 
+        @media (max-width: 767.1px) {
+            li {
+                width: 14px;
+                height: 14px;
+
+                &.slick-active {
+                    &::before {
+                        width: 6px;
+                        height: 6px;
+                    }
+                }
+            }
+        }
+
         li {
             position: relative;
-            width: 11px;
-            height: 11px;
+            width: 22px;
+            height: 22px;
             background-color: #fff;
             &:not(:last-child) {
                 margin-right: 20px;
@@ -150,8 +169,8 @@
                     position: absolute;
                     top: 50%;
                     left: 50%;
-                    width: 5px;
-                    height: 5px;
+                    width: 10px;
+                    height: 10px;
                     border-radius: 50%;
                     background-color: $color-text;
                     transform: translate(-50%, -50%);

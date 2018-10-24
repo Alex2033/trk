@@ -33,7 +33,10 @@ $('.slider-nav').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         dots: true,
-        arrows: true
+        arrows: true,
+        autoplay: true,
+        speed: 900,
+        autoplaySpeed: 3000
     });
 
     /* Табы на странице Плана сайта */
