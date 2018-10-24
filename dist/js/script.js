@@ -142,7 +142,18 @@ $('.slider-nav').slick({
     $('.mobile-menu').click(function(){
         $('.mobile-menu__list').toggleClass('header__block');
         $(document).find('.menu__nav').removeClass('header__block');
+        $('.mobile-menu .hamburger').toggleClass('is-active');
     });
+
+    $('.hidden-categories').click(function() {
+        $('.hidden-categories .hamburger').toggleClass('is-active');
+    });
+
+    if ( $(window).width() <= 767 ) {
+        $('.menu').click(function() {
+            $('.menu .hamburger').toggleClass('is-active');
+        });
+    }
 
     $('.menu').click(function(e){
         e.preventDefault();
