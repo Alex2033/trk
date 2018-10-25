@@ -8,6 +8,7 @@
 
 .lease-form__wrapper {
     @include flex();
+    margin-bottom: 15px;
 
     @media (max-width: $point-md) {
         margin-bottom: 0;
@@ -71,9 +72,18 @@
 .lease-form__checkboxes-label {
     @include flex();
     align-items: center;
+    justify-content: flex-start;
 
-    .lease-form__label-text {
-        margin-bottom: 15px;
+    label {
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        margin-bottom: 5px;
+
+        &:not(:last-child) {
+            margin-right: 40px;
+        }
     }
 
 }

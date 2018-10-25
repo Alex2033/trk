@@ -9,20 +9,23 @@
 
     @@include('partials/header.html')
 
-    <main class="error-page">
-        <div class="error-page__container container">
-            <h1 class="error-page__title">
-                <strong class="error-page__strong">404</strong>
-                <span class="error-page__text">Страница не найдена</span>
-            </h1>
-            <div class="error-page__description">
-                <p>
-                    Неправильно набран адрес или такой страницы больше не существует
-                </p>
-            </div>
-            <a href="site-map.html" class="error-page__link">Карта сайта</a>
-        </div>    
-    </main>
+    <div class="wrapper">
+        <main class="error-page">
+            <div class="error-page__container container">
+                <h1 class="error-page__title">
+                    <strong class="error-page__strong">404</strong>
+                    <span class="error-page__text">Страница не найдена</span>
+                </h1>
+                <div class="error-page__description">
+                    <p>
+                        Неправильно набран адрес или такой страницы больше не существует
+                    </p>
+                </div>
+                <a href="site-map.html" class="error-page__link">Карта сайта</a>
+            </div>    
+        </main>
+    </div>
+    
 
     @@include('partials/footer.html')
 

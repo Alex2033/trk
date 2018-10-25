@@ -301,3 +301,35 @@ function hideCaregories() {
 $(document).ready(function () {
     hideCaregories();
 });
+
+$(document).ready(function(){
+    slick_slider();
+});
+
+$(window).resize(function(){
+    slick_slider();
+});
+
+function slick_slider() {
+    var wrapper = $(".lease-image-slider");
+    if ($(".slick-initialized").length) {
+        wrapper.slick('unslick');
+    }
+    wrapper.slick({
+		responsive: [
+            {
+                breakpoint: 9999,
+                settings: "unslick"
+            },
+            {
+              breakpoint: 767,
+              settings: {
+                dots: true,
+                infinite: false,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+              }
+            }
+        ]
+    });
+};

@@ -4,6 +4,10 @@
 	box-sizing: border-box;
 }
 
+html, body {
+	height: 100%;
+}
+
 html {
 	font-size: 6px;
 
@@ -187,4 +191,14 @@ ol {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+}
+
+.title.title--margin-sm-bottom {
+	@media (max-width: 767.1px) {
+		margin-bottom: 15px;	
+	}
+}
+
+.main-user-consent-request-popup-button-acc {
+	background: #9bdcff;
 }

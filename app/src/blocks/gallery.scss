@@ -27,6 +27,7 @@
 
         @media (max-width: 767px) {
             display: block;
+            margin-bottom: 60px;
         }
     }
 
@@ -60,18 +61,89 @@
         }
     }
 
+    &__hover-block {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(#000, 0);
+        left: 0;
+        top: 0;
+        transition: background-color .2s ease;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            background-image: url(../img/play.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+    }
+
     &__wrap-img {
         display: inline-block;
         height: 100%;
+        width: calc(33.3333% - 19px);
         position: relative;
+     
 
         &--video {
             margin-right: 15px;
-            margin-bottom: 15px;
+            margin-bottom: 30px;
 
-            @media (max-width: 767px) {
-                margin-right: 0;
+            @media (max-width: 991.1px) {
+                width: calc(50% - 19px);
+                
+                .gallery__name {
+                    min-height: 40px;
+                }
+
+                .lease__img {
+                    max-height: 175px;
+                    height: 175px;
+                }
             }
+    
+            @media (max-width: 767.1px) {
+                width: calc(50% - 4px);
+                margin-right: 0;
+
+                .gallery__name {
+                    min-height: 30px;
+                }
+
+                .lease__img {
+                    max-height: 143px;
+                    height: 143px;
+                }
+            }
+    
+            @media (max-width: 480px) {
+                width: 100%;
+            }
+
+            .lease__img {   
+                position: relative;
+
+                &:hover {
+                    filter: brightness(100%);
+
+                    .gallery__hover-block {
+                        background-color: rgba(#000, .7);
+                    }
+                }
+            }
+
+            iframe {
+                width: 100%;
+                height: 100%;
+            }
+
         }
 
         &--last {
@@ -155,11 +227,13 @@
     &__play {
         position: absolute;
         top: 50%;
-        left: 0;
-        right: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
         margin: auto;
         text-align: center;
-        margin-top: -50px;
+        margin-top: -25px;
+        width: 60px;
+        height: 60px;
 
         &:focus {
             outline: none;
