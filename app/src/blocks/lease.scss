@@ -251,7 +251,7 @@
 
 .lease__images.lease-image-slider {
     .lease__img {
-        display: block;
+        display: block !important;
         width: calc(33.3333% - 15px);
         height: initial;
         max-height: 180px;
@@ -282,6 +282,7 @@
         .lease__img {
             max-height: initial;
             height: 200px;
+            width: 100%;
 
             img {
                 width: initial;

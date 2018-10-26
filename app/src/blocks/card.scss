@@ -225,7 +225,11 @@
 
     &__side-img {
         height: 105px;
-        width: 100%;
+        width: calc(50% - 7px);
+        margin-bottom: 15px;
+        display: block;
+        overflow: hidden;
+        
 
         &--1 {
             background-repeat: no-repeat;
@@ -237,13 +241,30 @@
             background-size: cover;
         }
 
+        &--big {
+            width: 100%;
+            height: initial;
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
         @media (max-width: 767.1px) {
-            height: 0;
-            padding-bottom: 50%;
+            overflow: visible;
+            height: initial;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
         }
 
         @media (max-width: 576px) {
-            padding-bottom: 100%;
+            height: 140px;
         }
     }
 
@@ -257,6 +278,9 @@
 
     &__side {
         width: 40%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
 
         a {
             transition: opacity .15s ease;
@@ -379,10 +403,15 @@
 
     &__categories {
         font-size: 1rem;
-        a, span {
+        a {
             display: inline-block;
-            vertical-align: middle;
+            vertical-align: bottom;
             text-decoration: underline;
+        }
+
+        span {
+            font-size: 14px;
+
         }
     }
 }

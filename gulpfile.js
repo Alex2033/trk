@@ -112,7 +112,7 @@ gulp.task('js', function() {
 });
 /* ================================ */
 
-/* ======== ТАСК "JS-LIBS" ======== */
+/* ======== ТАСК "JS-LIBS" ======== 
 gulp.task('js-libs', function() {
 	return gulp.src(app + 'src/libs.js') // Берём все необходимые скрипты
 		.pipe(plumber(err)) // Отслеживаем ошибки
@@ -121,6 +121,13 @@ gulp.task('js-libs', function() {
 		.pipe(rename({suffix: '.min'})) // Добавляем суффикс ".min"
 		.pipe(gulp.dest(dist + 'js')) // Выгружаем
 		.pipe(reload({stream: true})); // Перезагружаем сервер
+});
+/* ================================ */
+
+/* ========= ТАСК "LIBS" ========== */
+gulp.task('libs', function () {
+	return gulp.src(app + 'libs/**/*.js') // Выберем файлы по нужному пути
+		.pipe(gulp.dest(dist + 'libs')); // Выплюнем их
 });
 /* ================================ */
 
@@ -161,7 +168,7 @@ gulp.task('build', function(callback) {
 			'sass',
 			'css-libs',
 			'js',
-			'js-libs',
+			'libs',
 			'img',
 			'fonts'
 		],
