@@ -1338,9 +1338,19 @@ ol li {
   cursor: pointer;
 }
 
-.contact__callback-form {
+.contact-popup {
   display: none;
   position: fixed;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
+
+.contact__callback-form {
+  position: absolute;
   left: 50%;
   max-width: 500px;
   transform: translateX(-50%);
@@ -1380,6 +1390,7 @@ ol li {
   background-color: #fff;
   padding-left: 10px;
   padding-top: 10px;
+  margin-bottom: 15px;
 }
 
 .contact__textarea:hover,
@@ -1835,7 +1846,7 @@ ol li {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0);
   left: 0;
   top: 0;
   transition: background-color .2s ease;
@@ -1864,18 +1875,6 @@ ol li {
 .gallery__wrap-img--video {
   margin-right: 15px;
   margin-bottom: 30px;
-}
-
-.gallery__wrap-img--video .lease__img {
-  position: relative;
-}
-
-.gallery__wrap-img--video .lease__img:hover {
-  filter: brightness(100%);
-}
-
-.gallery__wrap-img--video .lease__img:hover .gallery__hover-block {
-  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .gallery__wrap-img--video iframe {
@@ -2012,6 +2011,7 @@ ol li {
 
 .site-map {
   align-self: stretch;
+  flex: 1;
 }
 
 .site-map__container {
@@ -2756,6 +2756,19 @@ ol li {
 
 button.mfp-close {
   font-size: 45px;
+}
+
+.magnific-video {
+  position: relative;
+  cursor: pointer;
+}
+
+.magnific-video:hover {
+  filter: brightness(100%);
+}
+
+.magnific-video:hover .gallery__hover-block {
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .header {

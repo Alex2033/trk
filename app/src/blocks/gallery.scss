@@ -127,17 +127,6 @@
                 width: 100%;
             }
 
-            .lease__img {   
-                position: relative;
-
-                &:hover {
-                    filter: brightness(100%);
-
-                    .gallery__hover-block {
-                        background-color: rgba(#000, .7);
-                    }
-                }
-            }
 
             iframe {
                 width: 100%;
