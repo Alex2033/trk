@@ -1,5 +1,12 @@
 .card {
     
+    &__title {
+        @media (max-width: 576px) {
+            padding-left: 40px;
+        }
+    }
+
+
     &__link {
         display: block;
         transition: filter .2s ease;

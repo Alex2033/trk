@@ -426,7 +426,6 @@ ol li {
   position: absolute;
   top: 50%;
   z-index: 50;
-  margin-top: -12px;
 }
 
 .slick-prev {
@@ -577,6 +576,20 @@ ol li {
 
 .zone__name:hover {
   text-decoration: none;
+}
+
+.shares .title {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.shares .title a {
+  color: #3c3c3b;
+  display: inline-block;
+}
+
+.shares .title a:hover {
+  color: #0066b3;
 }
 
 .shares__name {
@@ -737,8 +750,7 @@ ol li {
 }
 
 .censors__slider {
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 .censors__slider .slick-track {
@@ -1537,7 +1549,7 @@ ol li {
 }
 
 .shops__levels {
-  margin-top: 80px;
+  margin-top: 40px;
 }
 
 .shops__up--block {
@@ -1846,7 +1858,7 @@ ol li {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
   left: 0;
   top: 0;
   transition: background-color .2s ease;
@@ -2012,6 +2024,10 @@ ol li {
 .site-map {
   align-self: stretch;
   flex: 1;
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ffffff;
 }
 
 .site-map__container {
@@ -2667,10 +2683,9 @@ ol li {
   background-color: transparent;
   cursor: default;
   display: flex;
-  width: calc(100% + 30px);
-  margin-left: -15px;
   align-items: center;
-  padding-left: 20px;
+  padding-left: 0;
+  margin-left: -3px;
 }
 
 .hidden-categories .hamburger {
@@ -2769,6 +2784,23 @@ button.mfp-close {
 
 .magnific-video:hover .gallery__hover-block {
   background-color: rgba(0, 0, 0, 0.7);
+}
+
+.message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: #ddd;
+  padding: 15px;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  border-radius: 3px;
+  display: none;
+}
+
+.message p {
+  color: #000000;
+  margin-bottom: 0;
 }
 
 .header {
@@ -3395,7 +3427,7 @@ button.mfp-close {
 
   .header__tablet {
     display: block;
-    margin-top: 30px;
+    margin-top: 5px;
   }
 
   .header__desktop {
@@ -3639,7 +3671,7 @@ button.mfp-close {
   }
 
   .site-map__container {
-    padding: 30px 0;
+    padding: 30px 15px;
   }
 
   .tabs__item {
@@ -3942,6 +3974,12 @@ button.mfp-close {
   }
 
   .hidden-categories {
+    width: calc(100% + 30px);
+    margin-left: -15px;
+    padding-left: 20px;
+  }
+
+  .hidden-categories {
     background-color: #0066b3;
     color: #ffffff;
     font-size: 18px;
@@ -3971,6 +4009,10 @@ button.mfp-close {
 
   .tenant-shares__item img {
     width: 100%;
+  }
+
+  .header__tablet {
+    margin-top: 15px;
   }
 
   .header__main-left {
@@ -4220,7 +4262,7 @@ button.mfp-close {
   }
 
   .footer__left {
-    text-align: center;
+    text-align: left;
   }
 
   .footer__here__append:after {
@@ -4280,6 +4322,10 @@ button.mfp-close {
   .lease__title {
     width: 100%;
     margin-bottom: 15px;
+  }
+
+  .card__title {
+    padding-left: 40px;
   }
 
   .card__side-img {

@@ -1,5 +1,18 @@
 .shares {
     
+    .title {
+        margin-bottom: 20px;
+        text-align: center;
+        
+        a {
+            color: $color-main;
+            display: inline-block;
+
+            &:hover {
+                color: $accent-color;
+            }
+        }
+    }
 
     &__name {
         font-family: 'Open Sans Bold',sans-serif;

@@ -30,10 +30,16 @@
     background-color: transparent;
     cursor: default;
     display: flex;
-    width: calc(100% + 30px);
-    margin-left: -15px;
     align-items: center;
-    padding-left: 20px;
+    padding-left: 0;
+    margin-left: -3px;
+
+    @media (max-width: 767.1px) {
+        width: calc(100% + 30px);
+        margin-left: -15px;
+        padding-left: 20px;
+        
+    }
     
 
     .hamburger {
