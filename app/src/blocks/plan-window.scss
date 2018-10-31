@@ -1,0 +1,110 @@
+.plan-window {
+    max-width: 915px;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);      
+    position: fixed;
+    z-index: 100;
+    padding: 32px 10px 32px 32px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+
+    @media (max-width: 991.1px) {
+        max-width: calc(100% - 30px);
+    }
+
+    @media (max-width: 768px) {
+        padding: 15px;
+    }
+
+    h5 {
+        margin: 0 0 15px;
+        font-size: 13px;
+        text-transform: uppercase;
+        color: $color-text;
+
+        @media (max-width: 767.1px) {
+            margin-bottom: 5px;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        align-items: flex-start;
+
+        @media (max-width: 767.1px) {
+            flex-wrap: wrap;
+        }
+    }
+
+    &__text {
+        margin-top: -15px;
+
+        @media (max-width: 767.1px) {
+            margin-top: 0;
+
+            .shops__adress {
+                display: inline-block;
+            }
+
+            p {
+                font-size: 14px;
+            }
+        }
+
+        p {
+            font-size: 16px;
+            color: $color-main;
+            line-height: 1.2;
+            max-width: 510px;
+        }
+    }
+
+    .card__categories {
+        margin-bottom: 15px;
+    }
+
+    &__img {
+        width: 180px;
+        flex-shrink: 0;
+        margin-right: 30px;
+
+        img {
+            width: 100%;
+        }
+
+        @media (max-width: 767.1px) {
+            margin-bottom: 10px;
+        }
+    }
+
+    .shops__side--last {
+        flex-grow: 1;
+        margin-top: auto;
+        margin-bottom: 20px;
+
+        .shops__btn {
+            max-width: 130px;
+            margin-left: auto;
+            text-decoration: underline;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+
+        @media (max-width: 991.1px) {
+            position: static;
+        }
+
+        @media (max-width: 767.1px) {
+            margin-bottom: 0;
+            .header__plan {
+                margin-right: 0;
+            }
+        }
+    }
+
+}

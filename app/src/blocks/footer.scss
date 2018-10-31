@@ -63,6 +63,10 @@
 
    &__time {
     line-height: 38px;
+
+    @media (max-width: 1199.1px) {
+        line-height: 33px;
+    }
    }
 
     &__list {

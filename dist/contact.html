@@ -191,6 +191,7 @@
                     <input class="contact__btn button" id="contact__btn" type="submit" value="Обратная связь"/>
                     <div class="contact-popup">
                         <div class="message"></div>
+                        <div class="contact-popup__bg"></div>
                         <div class="contact__callback-form">
                             <header class="contact__header">
                                 <h5 class="contact__title">Обратная связь</h5>
@@ -205,6 +206,12 @@
                                 <input class="contact__inp text text--middle" type="phone" id="phone" name="phone" required/>
                                 <label class="contact__name" for="text_comment">Сообщение</label>
                                 <textarea class="contact__textarea text text--middle" name="area" id="text_comment" placeholder="Сообщение" required></textarea>
+                                <label class="footnote">
+                                    <div class="checkbox-container">
+                                        <input class="lease-form__checkbox" type="checkbox" required="required"><span class="checkmark"></span>
+                                    </div>
+                                    <div class="footnote__text">Я согласен с <a class="footnote__link" href="#">условиями обработки персональных данных</a></div>
+                                </label>
                                 <button type="submit" class="button" id="btn-submit">Отправить</button>
                             </form>
                         </div>

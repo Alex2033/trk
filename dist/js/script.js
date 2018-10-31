@@ -89,7 +89,8 @@ $('.slider-nav').slick({
 
     $('#contact__btn').click(function(){
         $('.contact-popup').css({
-            'display':'block'
+            'display':'block',
+            'top': $(window).scrollTop()
         })
     });
 
@@ -338,37 +339,12 @@ $(document).ready(function() {
     });
 });
 
-$(document).ready(function() {
-    $('.magnific-video .lease__img').magnificPopup({
-        type:'iframe',
-        removalDelay: 300,
-        mainClass: 'mfp-fade',
-        gallery: {
-            enabled: true
-        },
-        fixedContentPos: false,
-        fixedBgPos: false,
-    });
+
+$('.contact-popup__bg').click(function() {
+    $('.contact-popup').css('display', 'none');
 });
 
-$(document).mouseup(function(e) {
-    var container = $('.contact__callback-form');
-    if (!container.is(e.target) && container.has(e.target).length === 0) {
-        $('.contact-popup').css({
-            'display':'none'
-        });
-    }
+$(document).ready(function(){
+    $('.venobox').venobox(); 
 });
 
-$(document).ready(function() {
-    $('#form').submit(function() {
-        $.ajax({
-            type: 'POST',
-            url: 'mail.php',
-            data: $(this).serialize()
-        }).done(function() {
-            alert("Ваше сообщение отправлено!");
-        });
-        return false;
-    });
-});

@@ -39,7 +39,7 @@
                 <div class="title title--left lease__title">Фотогалерея</div>
             </div>
 
-            <div class="gallery__row gallery__items magnific-gallery">
+            <div class="gallery__row gallery__items">
 
                 <div class="gallery__link zona__wrap-img gallery__wrap-img">
                     <a href="img/gallery-1.png" class="">
@@ -156,29 +156,27 @@
 
             <div class="gallery__row zona__side">
                 <div class="zona__wrap-img gallery__wrap-img gallery__wrap-img--video">
-                    <div class="magnific-video">
-                        <a href="https://www.youtube.com/watch?v=vHX-8I48vlQ" class="lease__img">
-                            <iframe src="https://www.youtube.com/embed/vHX-8I48vlQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    <div class="video-gallery">
+                        <a class="venobox" data-autoplay="true" data-vbtype="video" data-gall="gall-video" href="https://www.youtube.com/watch?v=vHX-8I48vlQ">
+                            <img src="img/gallery-7.png" alt="">
                         </a>
-                        <div class="gallery__hover-block"></div>
+                        
                     </div>
                     <div class="zona__under-img gallery__name">Очень длинное  название видео</div>
                 </div>
                 <div class="zona__wrap-img gallery__wrap-img gallery__wrap-img--video">
-                    <div class="magnific-video">
-                        <a href="https://www.youtube.com/watch?v=vHX-8I48vlQ" class="lease__img">
-                            <iframe src="https://www.youtube.com/embed/vHX-8I48vlQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                        </a>
-                        <div class="gallery__hover-block"></div>
+                    <div class="video-gallery">
+                        <a class="venobox" data-autoplay="true" data-vbtype="video" data-gall="gall-video" href="https://www.youtube.com/watch?v=vHX-8I48vlQ">
+                            <img src="img/gallery-7.png" alt="">
+                        </a>       
                     </div>
                     <div class="zona__under-img gallery__name">Очень длинное  название видео</div>
                 </div>
                 <div class="zona__wrap-img gallery__wrap-img gallery__wrap-img--video gallery__wrap-img--last">
-                    <div class="magnific-video">
-                        <a href="https://www.youtube.com/watch?v=vHX-8I48vlQ" class="lease__img">
-                            <iframe src="https://www.youtube.com/embed/vHX-8I48vlQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    <div class="video-gallery">
+                        <a class="venobox" data-autoplay="true" data-vbtype="video" data-gall="gall-video" href="https://www.youtube.com/watch?v=vHX-8I48vlQ">
+                            <img src="img/gallery-7.png" alt="">
                         </a>
-                        <div class="gallery__hover-block"></div>
                     </div>
                     <div class="zona__under-img gallery__name">Очень длинное  название видео</div>
                 </div>
@@ -191,8 +189,14 @@
     <div id="scrollUp">
         <img src="img/angle-top.svg" alt="Angle Top" class="scrollUp__img">
     </div>
-
-    @@include('partials/js-scripts.html')
+    
+    <script src="libs/jquery/dist/jquery.js"></script>
+    <script src="libs/slick-carousel/slick/slick.js"></script>
+    <script src="libs/superfish/superfish.min.js"></script>
+    <script src="libs/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="libs/venobox/venobox.min.js"></script>
+    <script src="js/script.js"></script>
+    
 
 </body>
 

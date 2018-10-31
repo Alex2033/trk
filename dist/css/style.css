@@ -1352,13 +1352,22 @@ ol li {
 
 .contact-popup {
   display: none;
-  position: fixed;
-  background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   z-index: 100;
+}
+
+.contact-popup__bg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 19;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .contact__callback-form {
@@ -1474,6 +1483,16 @@ ol li {
 
 #map {
   height: 461px;
+}
+
+.mf-text {
+  line-height: 1;
+  margin-bottom: 15px;
+  font-size: 22px;
+}
+
+.mf-captcha img {
+  margin-bottom: 10px;
 }
 
 .shop {
@@ -1864,19 +1883,6 @@ ol li {
   transition: background-color .2s ease;
 }
 
-.gallery__hover-block::before {
-  content: '';
-  position: absolute;
-  width: 60px;
-  height: 60px;
-  background-image: url(../img/play.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
 .gallery__wrap-img {
   display: inline-block;
   height: 100%;
@@ -1977,6 +1983,32 @@ ol li {
 
 .gallery__play:focus {
   outline: none;
+}
+
+.video-gallery a {
+  max-height: initial;
+  display: block;
+  cursor: pointer;
+  position: relative;
+}
+
+.video-gallery a::before {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-image: url(../img/play.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.video-gallery img {
+  display: block;
+  width: 100%;
+  height: 150px;
 }
 
 .error-page {
@@ -2225,7 +2257,6 @@ ol li {
 }
 
 .services-menu {
-  margin-left: -15px;
   flex-shrink: 0;
 }
 
@@ -2246,6 +2277,12 @@ ol li {
 .services-menu .services-menu__item.active .lease__link,
 .services-menu .lease__left-item.active .lease__link {
   color: #0066b3;
+}
+
+.services-content__list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 0 20px;
 }
 
 .services-menu__item {
@@ -2271,6 +2308,7 @@ ol li {
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
+  margin-bottom: 25px;
 }
 
 .services-content__level {
@@ -2284,34 +2322,33 @@ ol li {
   padding-left: 0;
   border: 0;
   background-color: transparent;
-  transition: opacity .2s ease;
+}
+
+.services-content__level.active {
+  text-decoration: none;
 }
 
 .services-content__level:hover {
-  opacity: 0.8;
+  text-decoration: none;
 }
 
 .services-content__body {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  max-width: 100%;
-}
-
-.services-content__col {
-  width: calc(33.3333% - 40px);
-}
-
-.services-content__list {
-  list-style-type: none;
+  column-count: 3;
   padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.services-content__body-item {
+  page-break-inside: avoid;
+  break-inside: avoid;
 }
 
 .services-content__title {
   font-size: 13px;
   line-height: 1.2;
   font-weight: 700;
-  margin: 0;
+  margin: 0 0 5px;
   text-transform: uppercase;
 }
 
@@ -2801,6 +2838,73 @@ button.mfp-close {
 .message p {
   color: #000000;
   margin-bottom: 0;
+}
+
+.plan-window {
+  max-width: 915px;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  z-index: 100;
+  padding: 32px 10px 32px 32px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+.plan-window h5 {
+  margin: 0 0 15px;
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #2f3d4f;
+}
+
+.plan-window__wrapper {
+  display: flex;
+  align-items: flex-start;
+}
+
+.plan-window__text {
+  margin-top: -15px;
+}
+
+.plan-window__text p {
+  font-size: 16px;
+  color: #3c3c3b;
+  line-height: 1.2;
+  max-width: 510px;
+}
+
+.plan-window .card__categories {
+  margin-bottom: 15px;
+}
+
+.plan-window__img {
+  width: 180px;
+  flex-shrink: 0;
+  margin-right: 30px;
+}
+
+.plan-window__img img {
+  width: 100%;
+}
+
+.plan-window .shops__side--last {
+  flex-grow: 1;
+  margin-top: auto;
+  margin-bottom: 20px;
+}
+
+.plan-window .shops__side--last .shops__btn {
+  max-width: 130px;
+  margin-left: auto;
+  text-decoration: underline;
+}
+
+.plan-window .shops__side--last .shops__btn:hover {
+  text-decoration: none;
 }
 
 .header {
@@ -3475,6 +3579,10 @@ button.mfp-close {
   .card__shares {
     max-width: 100%;
   }
+
+  .footer__time {
+    line-height: 33px;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -3612,6 +3720,14 @@ button.mfp-close {
     max-height: 175px;
     height: 175px;
   }
+
+  .plan-window {
+    max-width: calc(100% - 30px);
+  }
+
+  .plan-window .shops__side--last {
+    position: static;
+  }
 }
 
 @media (max-width: 890px) {
@@ -3744,6 +3860,10 @@ button.mfp-close {
 
   .lease__right-side .lease-inner__title {
     justify-content: flex-start;
+  }
+
+  .plan-window {
+    padding: 15px;
   }
 
   .header__img {
@@ -4009,6 +4129,38 @@ button.mfp-close {
 
   .tenant-shares__item img {
     width: 100%;
+  }
+
+  .plan-window h5 {
+    margin-bottom: 5px;
+  }
+
+  .plan-window__wrapper {
+    flex-wrap: wrap;
+  }
+
+  .plan-window__text {
+    margin-top: 0;
+  }
+
+  .plan-window__text .shops__adress {
+    display: inline-block;
+  }
+
+  .plan-window__text p {
+    font-size: 14px;
+  }
+
+  .plan-window__img {
+    margin-bottom: 10px;
+  }
+
+  .plan-window .shops__side--last {
+    margin-bottom: 0;
+  }
+
+  .plan-window .shops__side--last .header__plan {
+    margin-right: 0;
   }
 
   .header__tablet {
@@ -4357,6 +4509,11 @@ button.mfp-close {
     margin-top: 10px;
   }
 
+  .mf-text {
+    font-size: 17px;
+    margin-bottom: 10px;
+  }
+
   .map-list {
     padding-left: 20px;
   }
@@ -4389,10 +4546,6 @@ button.mfp-close {
 
   .conventions__item {
     width: 50%;
-  }
-
-  .services-content__col {
-    width: calc(50% - 10px);
   }
 
   .parking__item {
@@ -4515,10 +4668,6 @@ button.mfp-close {
 
   .services-content__level {
     margin-right: 25px;
-  }
-
-  .services-content__col {
-    width: initial;
   }
 
   .header__search-btn {
