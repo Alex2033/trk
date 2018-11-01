@@ -88,13 +88,17 @@
         background-color: rgba(#000, .8);
     }
 
+    .footnote {
+        margin-top: 15px;
+    }
+
     &__callback-form {
         position: absolute;
         left: 50%;
         max-width: 500px;
         transform: translateX(-50%);
         width: 100%;
-        top: 10%;
+        top: 2%;
         background: white;
         padding: 30px 45px;
         box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.35);
@@ -177,7 +181,7 @@
         }
     }
 
-    &__name {
+    &__name, .mf-text {
         display: block;
         font-family: 'Open Sans Bold';
         font-size: 14px;

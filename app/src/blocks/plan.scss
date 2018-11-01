@@ -175,10 +175,15 @@
 }
 
 .services {
-    @include flex(flex-start, nowrap)
+    @include flex(flex-start, nowrap);
 
     @media (max-width: $point-xl) {
         flex-direction: column;
+    }
+
+    .lease__left-side {
+        max-width: 300px;
+        margin-left: -15px;
     }
 }
 
@@ -278,6 +283,10 @@
 .services-content__body-item {
     page-break-inside: avoid;
     break-inside: avoid;
+}
+
+.services-content__body-item--inline-block {
+    display: inline-block;
 }
 
 

@@ -41,10 +41,10 @@ $('.slider-nav').slick({
 
     /* Табы на странице Плана сайта */
 
-    $(".tab-content").not(":first").hide();
-    $(".tabs__item").click(function() {
-        $(".tabs__item").removeClass("active").eq($(this).index()).addClass("active");
-        $(".tab-content").hide().eq($(this).index()).fadeIn()
+    $(".tab-content, .services-tab-content").not(":first").hide();
+    $(".tabs__item, .services-content__level").click(function() {
+        $(".tabs__item, .services-content__level").removeClass("active").eq($(this).index()).addClass("active");
+        $(".tab-content, .services-tab-content").hide().eq($(this).index()).fadeIn()
     }).eq(0).addClass("active");
 
     $(".alt-tab-content").not(":first").hide();
@@ -337,6 +337,24 @@ $(document).ready(function() {
         fixedContentPos: false,
         fixedBgPos: false,
     });
+});
+
+$(document).ready(function() {
+    var galleryItems = $('.gallery__items').children();
+
+    for (var i = 1; i <= galleryItems.length; i++) {
+        $('#magnific-gallery' + i).magnificPopup({
+            type:'image',
+            delegate: 'a',
+            removalDelay: 300,
+            mainClass: 'mfp-fade',
+            gallery: {
+                enabled: true
+            },
+            fixedContentPos: false,
+            fixedBgPos: false,
+        });
+    } 
 });
 
 

@@ -36,15 +36,17 @@ button.mfp-close {
     font-size: 45px;
 }
 
-.magnific-video {
-    position: relative;
-    cursor: pointer;
-
+.video-gallery {
+    transition: filter .2s ease;
     &:hover {
-        filter: brightness(100%);
+        filter: brightness(80%);
+    }
+}
 
-        .gallery__hover-block {
-            background-color: rgba(#000, .7);
+.magnific-images {
+    .magnific-image {
+        &:not(:first-child) {
+            display: none;
         }
     }
 }
