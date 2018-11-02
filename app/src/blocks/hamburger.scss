@@ -45,7 +45,7 @@
   }
 }
 
-.hidden-categories .hamburger.is-active .line:nth-child(3){
+.hidden-categories .hamburger.is-active .line:nth-child(3), .mobile-services-menu .hamburger.is-active .line:nth-child(3){
   -webkit-transform: translateY(-5px) rotate(-45deg);
   -ms-transform: translateY(-5px) rotate(-45deg);
   -o-transform: translateY(-5px) rotate(-45deg);

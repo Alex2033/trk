@@ -71,6 +71,14 @@
     &-section {
         &__title {
             margin: 0;
+            
+            a {
+                color: $color-main;
+
+                &:hover {
+                    color: $accent-color;
+                }
+            }
 
             @media (max-width: $point-sm) {
                 margin-bottom: 20px;
