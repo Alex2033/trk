@@ -397,7 +397,7 @@ $("#form").submit(function() {
 
     $.ajax({
         type: "POST",
-        url: "/mail.php",
+        url: "mail.php",
         data: th.serialize()
     }).done(function() {
         alert("Thank you!");
